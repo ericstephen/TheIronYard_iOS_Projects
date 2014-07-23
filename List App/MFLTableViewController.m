@@ -10,7 +10,7 @@
 
 @interface MFLTableViewController ()
 
-@property (nonatomic) NSArray * listItems;
+@property (nonatomic) NSArray * infoList;
 
 @end
 
@@ -23,15 +23,15 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+
         
-       // self.listItems = [[NSArray alloc] initWithObjects:@"Monday", @"Tuesday",@"Wednesday", @"Thursday", nil];
-        
-       //  self.listItems = [NSArray arrayWithObjects:@"Monday", @"Tuesday", @"Wednesday", @"Thursday", nil];
-        
-        self.listItems = @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday"];
-        
-        
-        
+        self.infoList = @[@{@"day": @"Monday",@"color": [UIColor redColor], @"name": @"Arthur", @"size": @20},
+                          @{@"day": @"Tuesday", @"color":[UIColor orangeColor], @"name": @"Daniel", @"size": @22},
+                          @{@"day": @"Wednesday", @"color":[UIColor yellowColor], @"name": @"David", @"size": @24},
+                          @{@"day": @"Thursday", @"color":[UIColor greenColor], @"name": @"Eric", @"size": @24},
+                          @{@"day": @"Friday", @"color":[UIColor blueColor], @"name": @"Heidi", @"size": @26},
+                          @{@"day": @"Saturday", @"color":[UIColor purpleColor], @"name": @"Jaime", @"size": @28},
+                          @{@"day": @"Sunday", @"color":[UIColor grayColor], @"name": @"Jeff", @"size": @30}];
         
     }
     return self;
@@ -50,86 +50,40 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.listItems.count;
-
-    // Return the number of rows in the section.
+    return self.infoList.count;
+    
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc] init];
-    
-    //NSString * listItem = [self.listItems objectAtIndex:indexPath.row];
-    
-    NSString * listItem = self.listItems[indexPath.row];
-    
-    NSLog(@"listItem = %@", listItem);
-    
-    cell.textLabel.text = listItem;
-    
-    cell.backgroundColor = [UIColor greenColor];
+    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier: @"cell"];
     
     
-    // Configure the cell...
+    NSDictionary * infoItem = self.infoList[indexPath.row];
+
+    cell.textLabel.text = infoItem [@"day"];
+    cell.detailTextLabel.text = infoItem [@"name"];
+    cell.backgroundColor = infoItem [@"color"];
+    cell.textLabel.font = [UIFont systemFontOfSize:[infoItem [@"size"] intValue]];
+    
+    cell.textLabel.font = [UIFont fontWithName: @"HelveticaNeue-Bold" size: [infoItem [@"size"] intValue]];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    CGFloat height=75;
+    
+  
+
+    return height;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
