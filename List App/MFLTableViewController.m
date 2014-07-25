@@ -72,9 +72,8 @@
     cell.detailTextLabel.text = infoItem [@"name"];
     cell.backgroundColor = infoItem [@"color"];
     cell.textLabel.font = [UIFont systemFontOfSize:[infoItem [@"size"] intValue]];
-    
     cell.textLabel.font = [UIFont fontWithName: @"HelveticaNeue-Bold" size: [infoItem [@"size"] intValue]];
-    
+    cell.detailTextLabel.font = [UIFont fontWithName: @"HelveticaNeue" size: [infoItem [@"size"] intValue]];
     return cell;
 }
 
