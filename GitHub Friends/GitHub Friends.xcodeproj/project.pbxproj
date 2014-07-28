@@ -21,6 +21,11 @@
 		DD53E9EE19813EF700219D83 /* GitHub_FriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD53E9ED19813EF700219D83 /* GitHub_FriendsTests.m */; };
 		DD53E9FA19813F9600219D83 /* GFATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD53E9F919813F9600219D83 /* GFATableViewController.m */; };
 		DD53E9FD1981481600219D83 /* GFATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD53E9FC1981481600219D83 /* GFATableViewCell.m */; };
+		DD8B5C8A1982A7E80057B802 /* GFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8B5C891982A7E80057B802 /* GFAViewController.m */; };
+		DD8B5C911982D66E0057B802 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8B5C8D1982D66E0057B802 /* downArrow.png */; };
+		DD8B5C921982D66E0057B802 /* profileArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8B5C8E1982D66E0057B802 /* profileArrow.png */; };
+		DD8B5C931982D66E0057B802 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8B5C8F1982D66E0057B802 /* searchButton.png */; };
+		DD8B5C941982D66E0057B802 /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8B5C901982D66E0057B802 /* upArrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,12 @@
 		DD53E9F919813F9600219D83 /* GFATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFATableViewController.m; sourceTree = "<group>"; };
 		DD53E9FB1981481600219D83 /* GFATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFATableViewCell.h; sourceTree = "<group>"; };
 		DD53E9FC1981481600219D83 /* GFATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFATableViewCell.m; sourceTree = "<group>"; };
+		DD8B5C881982A7E80057B802 /* GFAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFAViewController.h; sourceTree = "<group>"; };
+		DD8B5C891982A7E80057B802 /* GFAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFAViewController.m; sourceTree = "<group>"; };
+		DD8B5C8D1982D66E0057B802 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		DD8B5C8E1982D66E0057B802 /* profileArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileArrow.png; sourceTree = "<group>"; };
+		DD8B5C8F1982D66E0057B802 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
+		DD8B5C901982D66E0057B802 /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +94,7 @@
 		DD53E9BC19813EF700219D83 = {
 			isa = PBXGroup;
 			children = (
+				DD8B5C8B1982D64D0057B802 /* Image Resources */,
 				DD53E9F719813F7E00219D83 /* Controllers */,
 				DD53E9CE19813EF700219D83 /* GitHub Friends */,
 				DD53E9E719813EF700219D83 /* GitHub FriendsTests */,
@@ -158,8 +170,30 @@
 				DD53E9F919813F9600219D83 /* GFATableViewController.m */,
 				DD53E9FB1981481600219D83 /* GFATableViewCell.h */,
 				DD53E9FC1981481600219D83 /* GFATableViewCell.m */,
+				DD8B5C881982A7E80057B802 /* GFAViewController.h */,
+				DD8B5C891982A7E80057B802 /* GFAViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DD8B5C8B1982D64D0057B802 /* Image Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B5C8C1982D66E0057B802 /* githubFriends */,
+			);
+			name = "Image Resources";
+			sourceTree = "<group>";
+		};
+		DD8B5C8C1982D66E0057B802 /* githubFriends */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B5C8D1982D66E0057B802 /* downArrow.png */,
+				DD8B5C8E1982D66E0057B802 /* profileArrow.png */,
+				DD8B5C8F1982D66E0057B802 /* searchButton.png */,
+				DD8B5C901982D66E0057B802 /* upArrow.png */,
+			);
+			name = githubFriends;
+			path = ../../../Downloads/githubFriends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8B5C911982D66E0057B802 /* downArrow.png in Resources */,
 				DD53E9D319813EF700219D83 /* InfoPlist.strings in Resources */,
 				DD53E9DB19813EF700219D83 /* Images.xcassets in Resources */,
+				DD8B5C921982D66E0057B802 /* profileArrow.png in Resources */,
+				DD8B5C941982D66E0057B802 /* upArrow.png in Resources */,
+				DD8B5C931982D66E0057B802 /* searchButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8B5C8A1982A7E80057B802 /* GFAViewController.m in Sources */,
 				DD53E9FA19813F9600219D83 /* GFATableViewController.m in Sources */,
 				DD53E9D519813EF700219D83 /* main.m in Sources */,
 				DD53E9FD1981481600219D83 /* GFATableViewCell.m in Sources */,
@@ -458,6 +497,7 @@
 				DD53E9F319813EF700219D83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD53E9F419813EF700219D83 /* Build configuration list for PBXNativeTarget "GitHub FriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +506,7 @@
 				DD53E9F619813EF700219D83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

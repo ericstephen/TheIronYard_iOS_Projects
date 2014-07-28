@@ -16,15 +16,32 @@
     
     UILabel * friendLocation;
     
-    UIButton * urlSite;
-    
     UIButton * gistSite;
     
-    UILabel * followIn;
-    
-    UILabel * followOut;
-    
     UITextField * searchBar;
+    
+    UIButton * profileButton;
+    
+    UILabel * gistCount;
+    
+    UIButton * followCountUp;
+    
+    UIButton * followCountDown;
+    
+    UILabel * leader;
+    
+    UILabel * justFriends;
+    
+    UILabel * follower;
+    
+    UILabel * countDown;
+    
+    UILabel * countUp;
+    
+    
+    
+    
+    
 }
 
 
@@ -34,53 +51,54 @@
     if (self) {
         // Initialization code
         
-        friendName = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, 200, 40)];
-        friendName.font = [UIFont fontWithName:@"HelveticaNeue-Ultralight" size:30];
+        self.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        
+        
+        friendName = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 200, 40)];
+        friendName.font = [UIFont fontWithName:@"HelveticaNeue-Ultralight" size:20];
+        friendName.textColor = [UIColor whiteColor];
         
         [self.contentView addSubview:friendName];
         
-        friendImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
-        friendImage.layer.cornerRadius = 20.0;
-        friendImage.layer.masksToBounds = YES;
+        
+        friendImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 115, 115)];
+
         
         [self.contentView addSubview:friendImage];
         
-        friendLocation = [[UILabel alloc] initWithFrame:CGRectMake(60, 25, 200, 40)];
+        friendLocation = [[UILabel alloc] initWithFrame:CGRectMake(120, 20, 200, 40)];
         friendLocation.font = [UIFont fontWithName:@"HelveticaNeue-light" size:15];
+        friendLocation.textColor = [UIColor whiteColor];
         
         [self.contentView addSubview:friendLocation];
         
-        urlSite = [[UIButton alloc] initWithFrame:CGRectMake(230, 60, 80, 20)];
-        urlSite.backgroundColor = [UIColor grayColor];
-        urlSite.layer.cornerRadius = 10;
-        urlSite.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:13];
-        [urlSite setTitle:@"PROFILE" forState:UIControlStateNormal];
-        
-        [self.contentView addSubview:urlSite];
-        
-        
-        gistSite = [[UIButton alloc] initWithFrame:CGRectMake(230, 90, 80, 20)];
-        gistSite.backgroundColor = [UIColor grayColor];
-        gistSite.layer.cornerRadius = 10;
+    
+        gistSite = [[UIButton alloc] initWithFrame:CGRectMake(250, 80, 60, 24)];
+        gistSite.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        gistSite.layer.borderWidth = 1;
+        gistSite.layer.borderColor = [UIColor whiteColor].CGColor;
+        gistSite.layer.cornerRadius = 12;
         gistSite.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:13];
         [gistSite setTitle:@"GIST" forState:UIControlStateNormal];
         
         [self.contentView addSubview:gistSite];
         
-        followIn = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, 120, 20)];
-        followIn.font = [UIFont fontWithName:@"HelveticaNeue-light" size:13];
-        followIn.textColor = [UIColor blackColor];
         
-        [self.contentView addSubview:followIn];
+        gistCount = [[UILabel alloc] initWithFrame:CGRectMake(235, 80, 24, 24)];
+        gistCount.backgroundColor = [UIColor whiteColor];
+        gistCount.layer.cornerRadius = 12;
+        gistCount.layer.masksToBounds = YES;
+        gistCount.textAlignment = NSTextAlignmentCenter;
         
-        followOut = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 120, 20)];
-        followOut.font = [UIFont fontWithName:@"HelveticaNeue-light" size:13];
-        followOut.textColor = [UIColor blackColor];
+    
+        [self.contentView addSubview:gistCount];
         
-        [self.contentView addSubview:followOut];
         
-
+        profileButton = [[UIButton alloc] initWithFrame:CGRectMake(285, 10, 24, 24)];
+        UIImage *detailArrow = [UIImage imageNamed:@"profileArrow.png"];
+        [profileButton setImage:detailArrow forState:UIControlStateNormal];
         
+        [self.contentView addSubview:profileButton];
         
     }
     return self;
@@ -104,16 +122,126 @@
     friendLocation.text = friendInfo[@"location"];
     
     
-    NSString * followers = [NSString stringWithFormat:@"Followers : %@", friendInfo[@"followers"]];
+    NSString * gists = [NSString stringWithFormat:@"%@", friendInfo[@"public_gists"]];
     
-    followIn.text = followers;
+    gistCount.text = gists;
     
-    NSString * following = [NSString stringWithFormat:@"Following : %@", friendInfo[@"following"]];
     
-    followOut.text = following;
+    
+       int ratio = [friendInfo[@"followers"] intValue] - [friendInfo[@"following"] intValue];
+    
+    if (ratio > 0)
+    {
+
+        
+        countDown = [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
+        countDown.layer.cornerRadius = 10;
+        countDown.layer.masksToBounds= 1;
+        countDown.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        countDown.textColor = [UIColor whiteColor];
+        countDown.textAlignment= NSTextAlignmentCenter;
+        countDown.layer.borderWidth = 0.5;
+        countDown.layer.borderColor = [[UIColor whiteColor]CGColor];
+        countDown.text = [NSString stringWithFormat:@"%d", abs(ratio)];
+        
+        [self.contentView addSubview:countDown];
+        
+        followCountUp = [UIButton buttonWithType:UIButtonTypeCustom];
+        followCountUp.frame = CGRectMake(100, 80, 24, 24);
+        [followCountUp setBackgroundImage:[UIImage imageNamed:@"upArrow.png"] forState:UIControlStateNormal];
+        
+        [self.contentView addSubview:followCountUp];
+        
+        leader = [[UILabel alloc]initWithFrame:CGRectMake(148.0, 65, 40.0, 20)];
+        leader.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        leader.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        leader.text = @"Leader";
+        leader.textColor = [UIColor colorWithRed:0.196f green:0.973f blue:0.749f alpha:1.0f];
+        leader.textAlignment= NSTextAlignmentCenter;
+        
+        [self.contentView addSubview:leader];
+        
+    }
+    
+    else if (ratio < 0)
+    {
+        
+        countDown = [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
+        countDown.layer.cornerRadius = 12;
+        countDown.layer.masksToBounds= 1;
+        countDown.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        countDown.textAlignment= NSTextAlignmentCenter;
+        countDown.layer.borderWidth = 0.5;
+        countDown.layer.borderColor = [[UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f]CGColor];
+        countDown.textColor = [UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f];
+        countDown.text = [NSString stringWithFormat:@"%d", abs(ratio)];
+        
+        [self.contentView addSubview:countDown];
+        
+        
+        followCountDown = [UIButton buttonWithType:UIButtonTypeCustom];
+        followCountDown.frame = CGRectMake(120, 80, 24, 24);
+        [followCountDown setBackgroundImage:[UIImage imageNamed:@"downArrow.png"] forState:UIControlStateNormal];
+        
+        [self.contentView addSubview:followCountDown];
+
+
+        follower = [[UILabel alloc]initWithFrame:CGRectMake(170, 80, 40, 24)];
+        follower.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        follower.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        follower.text = @"Follower";
+        follower.textColor = [UIColor redColor];
+        follower.textAlignment= NSTextAlignmentCenter;
+        
+        [self.contentView addSubview:follower];
+
+        
+    }
+    else
+    {
+        
+        justFriends= [[UILabel alloc]initWithFrame:CGRectMake(165, 80, 65 , 24)];
+        justFriends.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        justFriends.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        justFriends.text = @"Just Friends";
+        justFriends.textColor = [UIColor colorWithRed:0.498f green:0.498f blue:0.498f alpha:1.0f];
+        justFriends.textAlignment= NSTextAlignmentCenter;
+        
+        
+        [self.contentView addSubview:justFriends];
+        
+        
+        countDown= [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
+        countDown.layer.cornerRadius = 12;
+        countDown.layer.masksToBounds= 1;
+        countDown.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        countDown.textAlignment= NSTextAlignmentCenter;
+        countDown.layer.borderWidth = 0.5;
+        countDown.layer.borderColor = [[UIColor whiteColor]CGColor];
+        countDown.textColor = [UIColor whiteColor];
+        countDown.text = [NSString stringWithFormat:@"%d", ratio];
+        
+        [self.contentView addSubview:countDown];
+        
+        
+        followCountDown = [UIButton buttonWithType:UIButtonTypeCustom];
+        followCountDown.frame = CGRectMake(120, 80, 24, 24);
+        followCountDown.layer.cornerRadius = 12;
+        followCountDown.layer.masksToBounds = YES;
+        followCountDown.backgroundColor = [UIColor whiteColor];
+        
+        [self.contentView addSubview:followCountDown];
+        
+        
+
+        
+  
+    }
     
 }
-
 - (void)awakeFromNib
 {
     // Initialization code

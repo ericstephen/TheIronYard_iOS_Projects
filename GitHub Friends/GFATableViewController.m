@@ -8,6 +8,7 @@
 
 #import "GFATableViewController.h"
 #import "GFATableViewCell.h"
+#import "GFAViewController.h"
 
 @interface GFATableViewController ()
 
@@ -20,6 +21,8 @@
     UITextField * searchBar;
     
     UIButton * searchButton;
+    
+    
 }
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,6 +41,7 @@
             @"followers_url": @"https://api.github.com/users/renecandelier/followers",
             @"following_url": @"https://api.github.com/users/renecandelier/following{/other_user}",
             @"gists_url": @"https://api.github.com/users/renecandelier/gists{/gist_id}",
+            @"public_gists": @0,
             @"name": @"Rene Candelier",
             @"company": @"Novus Mobile",
             @"blog": @"",
@@ -55,6 +59,7 @@
             @"followers_url": @"https://api.github.com/users/ssniteman/followers",
             @"following_url": @"https://api.github.com/users/ssniteman/following{/other_user}",
             @"gists_url": @"https://api.github.com/users/ssniteman/gists{/gist_id}",
+            @"public_gists": @0,
             @"name": @"Shane Sniteman",
             @"company": @"",
             @"blog": @"",
@@ -71,6 +76,7 @@
             @"html_url": @"https://github.com/npeterson213",
             @"followers_url": @"https://api.github.com/users/npeterson213/followers",
             @"following_url": @"https://api.github.com/users/npeterson213/following{/other_user}",
+            @"public_gists": @0,
             @"name": @"Nick Peterson",
             @"location": @"Atlanta, GA",
             @"followers": @0,
@@ -85,6 +91,7 @@
             @"followers_url": @"https://api.github.com/users/dmerrill88/followers",
             @"following_url": @"https://api.github.com/users/dmerrill88/following{/other_user}",
             @"gists_url": @"https://api.github.com/users/dmerrill88/gists{/gist_id}",
+            @"public_gists": @0,
             @"name": @"Daniel Merrill",
             @"location": @"United States",
             @"followers": @0,
@@ -99,42 +106,58 @@
             @"followers_url": @"https://api.github.com/users/JaimeConnor/followers",
             @"following_url": @"https://api.github.com/users/JaimeConnor/following{/other_user}",
             @"gists_url": @"https://api.github.com/users/JaimeConnor/gists{/gist_id}",
+            @"public_gists": @0,
             @"name": @"Jaime Connor",
             @"location": @"Atlanta, Georgia",
             @"followers": @0,
             @"following": @0,}
         
         ] mutableCopy];
-        
     }
     return self;
 }
 
+-(void)dismissKeyboard
+{
+    [searchBar resignFirstResponder];
+}
+
 - (void)viewDidLoad
 {
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    [tap setCancelsTouchesInView:NO];
+    
+    
     [super viewDidLoad];
     
-    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
     
     self.tableView.tableHeaderView = headerView;
     
-    searchBar = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 250, 40)];
-    searchBar.backgroundColor = [UIColor grayColor];
-    searchBar.layer.borderColor = [UIColor blackColor].CGColor;
+    headerView.backgroundColor = [UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f];
+    
+    searchBar = [[UITextField alloc] initWithFrame:CGRectMake(10, 21, 250, 40)];
+    searchBar.backgroundColor = [UIColor whiteColor];
+    searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
     searchBar.layer.borderWidth = 1;
     searchBar.placeholder = @"search";
     searchBar.font = [UIFont fontWithName:@"HelveticaNeue-light" size:25];
     searchBar.textColor = [UIColor whiteColor];
+    searchBar.layer.cornerRadius = 10;
     UIView *paddingview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     searchBar.leftView = paddingview;
     searchBar.leftViewMode = UITextFieldViewModeAlways;
     [self.view addSubview:searchBar];
     
-    searchButton = [[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 40)];
-    searchButton.backgroundColor = [UIColor grayColor];
-    [searchButton setTitle:@"GO" forState:UIControlStateNormal];
-    searchButton.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
+    searchButton = [[UIButton alloc]initWithFrame:CGRectMake(270, 21, 40, 40)];
     searchButton.layer.cornerRadius = 20;
+    searchButton.backgroundColor = [UIColor whiteColor];
+    [searchButton addTarget:self action:@selector(searchButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *search = [UIImage imageNamed:@"searchButton.png"];
+    [searchButton setImage:search forState:UIControlStateNormal];
     
     [self.view addSubview:searchButton];
     
@@ -193,6 +216,31 @@
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Select row at %@", indexPath);
+    
+    GFAViewController * profileView = [[GFAViewController alloc] init];
+    
+    profileView.view.backgroundColor = [UIColor lightGrayColor];
+    
+    profileView.friendInfo = githubFriends[indexPath.row];
+    
+    [self.navigationController pushViewController: profileView animated: YES];
+    
+}
+
+- (void)searchButtonClicked
+{
+    NSLog(@"Search Button Clicked");
+    self.view.backgroundColor = [UIColor grayColor];
+}
+
+-(void)profileButtonClicked
+{
+    
 }
 
 
