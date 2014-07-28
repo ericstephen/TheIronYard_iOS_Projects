@@ -34,13 +34,9 @@
     
     UILabel * follower;
     
-    UILabel * countDown;
+    UILabel * count;
     
     UILabel * countUp;
-    
-    
-    
-    
     
 }
 
@@ -90,7 +86,6 @@
         gistCount.layer.masksToBounds = YES;
         gistCount.textAlignment = NSTextAlignmentCenter;
         
-    
         [self.contentView addSubview:gistCount];
         
         
@@ -132,20 +127,19 @@
     
     if (ratio > 0)
     {
-
+        count = [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
+        count.layer.cornerRadius = 10;
+        count.layer.masksToBounds= 1;
+        count.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        count.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        count.textColor = [UIColor whiteColor];
+        count.textAlignment= NSTextAlignmentCenter;
+        count.layer.borderWidth = 0.5;
+        count.layer.borderColor = [[UIColor whiteColor]CGColor];
+        count.text = [NSString stringWithFormat:@"%d", abs(ratio)];
         
-        countDown = [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
-        countDown.layer.cornerRadius = 10;
-        countDown.layer.masksToBounds= 1;
-        countDown.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
-        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
-        countDown.textColor = [UIColor whiteColor];
-        countDown.textAlignment= NSTextAlignmentCenter;
-        countDown.layer.borderWidth = 0.5;
-        countDown.layer.borderColor = [[UIColor whiteColor]CGColor];
-        countDown.text = [NSString stringWithFormat:@"%d", abs(ratio)];
+        [self.contentView addSubview:count];
         
-        [self.contentView addSubview:countDown];
         
         followCountUp = [UIButton buttonWithType:UIButtonTypeCustom];
         followCountUp.frame = CGRectMake(100, 80, 24, 24);
@@ -153,11 +147,12 @@
         
         [self.contentView addSubview:followCountUp];
         
+        
         leader = [[UILabel alloc]initWithFrame:CGRectMake(148.0, 65, 40.0, 20)];
         leader.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
         leader.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
-        leader.text = @"Leader";
         leader.textColor = [UIColor colorWithRed:0.196f green:0.973f blue:0.749f alpha:1.0f];
+        leader.text = @"Leader";
         leader.textAlignment= NSTextAlignmentCenter;
         
         [self.contentView addSubview:leader];
@@ -166,19 +161,19 @@
     
     else if (ratio < 0)
     {
+        count = [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
+        count.layer.cornerRadius = 12;
+        count.layer.masksToBounds= 1;
+        count.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        count.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        count.textColor = [UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f];
+        count.textAlignment= NSTextAlignmentCenter;
+        count.layer.borderWidth = 0.5;
+        count.layer.borderColor = [[UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f]CGColor];
+
+        count.text = [NSString stringWithFormat:@"%d", abs(ratio)];
         
-        countDown = [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
-        countDown.layer.cornerRadius = 12;
-        countDown.layer.masksToBounds= 1;
-        countDown.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
-        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
-        countDown.textAlignment= NSTextAlignmentCenter;
-        countDown.layer.borderWidth = 0.5;
-        countDown.layer.borderColor = [[UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f]CGColor];
-        countDown.textColor = [UIColor colorWithRed:0.996f green:0.008f blue:0.333f alpha:1.0f];
-        countDown.text = [NSString stringWithFormat:@"%d", abs(ratio)];
-        
-        [self.contentView addSubview:countDown];
+        [self.contentView addSubview:count];
         
         
         followCountDown = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -191,53 +186,48 @@
         follower = [[UILabel alloc]initWithFrame:CGRectMake(170, 80, 40, 24)];
         follower.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
         follower.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
-        follower.text = @"Follower";
         follower.textColor = [UIColor redColor];
+        follower.text = @"Follower";
         follower.textAlignment= NSTextAlignmentCenter;
         
         [self.contentView addSubview:follower];
-
         
     }
+    
     else
     {
         
-        justFriends= [[UILabel alloc]initWithFrame:CGRectMake(165, 80, 65 , 24)];
+        justFriends = [[UILabel alloc]initWithFrame:CGRectMake(165, 80, 65 , 24)];
         justFriends.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
         justFriends.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
-        justFriends.text = @"Just Friends";
         justFriends.textColor = [UIColor colorWithRed:0.498f green:0.498f blue:0.498f alpha:1.0f];
+        justFriends.text = @"Just Friends";
         justFriends.textAlignment= NSTextAlignmentCenter;
-        
         
         [self.contentView addSubview:justFriends];
         
         
-        countDown= [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
-        countDown.layer.cornerRadius = 12;
-        countDown.layer.masksToBounds= 1;
-        countDown.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
-        countDown.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
-        countDown.textAlignment= NSTextAlignmentCenter;
-        countDown.layer.borderWidth = 0.5;
-        countDown.layer.borderColor = [[UIColor whiteColor]CGColor];
-        countDown.textColor = [UIColor whiteColor];
-        countDown.text = [NSString stringWithFormat:@"%d", ratio];
+        count = [[UILabel alloc]initWithFrame:CGRectMake(140.0, 80, 24, 24)];
+        count.layer.cornerRadius = 12;
+        count.layer.masksToBounds= 1;
+        count.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
+        count.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:11];
+        count.textColor = [UIColor whiteColor];
+        count.textAlignment= NSTextAlignmentCenter;
+        count.layer.borderWidth = 0.5;
+        count.layer.borderColor = [[UIColor grayColor]CGColor];
+        count.text = [NSString stringWithFormat:@"%d", ratio];
         
-        [self.contentView addSubview:countDown];
+        [self.contentView addSubview:count];
         
         
         followCountDown = [UIButton buttonWithType:UIButtonTypeCustom];
         followCountDown.frame = CGRectMake(120, 80, 24, 24);
         followCountDown.layer.cornerRadius = 12;
         followCountDown.layer.masksToBounds = YES;
-        followCountDown.backgroundColor = [UIColor whiteColor];
+        followCountDown.backgroundColor = [UIColor grayColor];
         
         [self.contentView addSubview:followCountDown];
-        
-        
-
-        
   
     }
     
