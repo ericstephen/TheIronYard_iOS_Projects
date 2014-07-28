@@ -9,6 +9,9 @@
 #import "GFATableViewController.h"
 #import "GFATableViewCell.h"
 #import "GFAViewController.h"
+#import "GRAGithubRequest.h"
+
+// 403c3612e033b9e9893de521c32ed4ffbccdff9b //
 
 @interface GFATableViewController ()
 
@@ -30,89 +33,18 @@
     if (self) {
         // Custom initialization
         
-        githubFriends = [@[
-        @{
-            @"login": @"renecandelier",
-            @"id": @4494771,
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/4494771?",
-            @"gravatar_id": @"01115a6dcc0c2129fa822e877e8a5e7a",
-            @"url": @"https://api.github.com/users/renecandelier",
-            @"html_url": @"https://github.com/renecandelier",
-            @"followers_url": @"https://api.github.com/users/renecandelier/followers",
-            @"following_url": @"https://api.github.com/users/renecandelier/following{/other_user}",
-            @"gists_url": @"https://api.github.com/users/renecandelier/gists{/gist_id}",
-            @"public_gists": @0,
-            @"name": @"Rene Candelier",
-            @"company": @"Novus Mobile",
-            @"blog": @"",
-            @"location": @"United States",
-            @"email": @"renecandelier@gmail.com",
-            @"followers": @1,
-            @"following": @2,},
-        @{
-            @"login": @"ssniteman",
-            @"id": @4793213,
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/4793213?",
-            @"gravatar_id": @"c3064d7a4da0dcea13f84d83b6eafac4",
-            @"url": @"https://api.github.com/users/ssniteman",
-            @"html_url": @"https://github.com/ssniteman",
-            @"followers_url": @"https://api.github.com/users/ssniteman/followers",
-            @"following_url": @"https://api.github.com/users/ssniteman/following{/other_user}",
-            @"gists_url": @"https://api.github.com/users/ssniteman/gists{/gist_id}",
-            @"public_gists": @0,
-            @"name": @"Shane Sniteman",
-            @"company": @"",
-            @"blog": @"",
-            @"location": @"Atlanta, GA",
-            @"email": @"ssniteman@gmail.com",
-            @"followers": @22,
-            @"following": @35,},
-        @{
-            @"login": @"npeterson213",
-            @"id": @8224722,
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224722?",
-            @"gravatar_id": @"62343ab9edebc48399b0e4095f42f14f",
-            @"url": @"https://api.github.com/users/npeterson213",
-            @"html_url": @"https://github.com/npeterson213",
-            @"followers_url": @"https://api.github.com/users/npeterson213/followers",
-            @"following_url": @"https://api.github.com/users/npeterson213/following{/other_user}",
-            @"public_gists": @0,
-            @"name": @"Nick Peterson",
-            @"location": @"Atlanta, GA",
-            @"followers": @0,
-            @"following": @0,},
-        @{
-            @"login": @"dmerrill88",
-            @"id": @8224723,
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224723?",
-            @"gravatar_id": @"2e445c7b6aa2a73de0f369436515f7e6",
-            @"url": @"https://api.github.com/users/dmerrill88",
-            @"html_url": @"https://github.com/dmerrill88",
-            @"followers_url": @"https://api.github.com/users/dmerrill88/followers",
-            @"following_url": @"https://api.github.com/users/dmerrill88/following{/other_user}",
-            @"gists_url": @"https://api.github.com/users/dmerrill88/gists{/gist_id}",
-            @"public_gists": @0,
-            @"name": @"Daniel Merrill",
-            @"location": @"United States",
-            @"followers": @0,
-            @"following": @0,},
-        @{
-            @"login": @"JaimeConnor",
-            @"id": @8224727,
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224727?",
-            @"gravatar_id": @"c095fcff9ec739118aec1f807107f07f",
-            @"url": @"https://api.github.com/users/JaimeConnor",
-            @"html_url": @"https://github.com/JaimeConnor",
-            @"followers_url": @"https://api.github.com/users/JaimeConnor/followers",
-            @"following_url": @"https://api.github.com/users/JaimeConnor/following{/other_user}",
-            @"gists_url": @"https://api.github.com/users/JaimeConnor/gists{/gist_id}",
-            @"public_gists": @0,
-            @"name": @"Jaime Connor",
-            @"location": @"Atlanta, Georgia",
-            @"followers": @0,
-            @"following": @0,}
+        githubFriends = [@[] mutableCopy];
         
-        ] mutableCopy];
+        NSArray *loadedUsers = [GRAGithubRequest loadUsers];
+        
+        if ([GRAGithubRequest loadUsers])
+        {
+            githubFriends = [loadedUsers mutableCopy];
+        }
+        
+        self.tableView.rowHeight = 100;
+        
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     return self;
 }
@@ -145,12 +77,14 @@
     searchBar.layer.borderWidth = 1;
     searchBar.placeholder = @"search";
     searchBar.font = [UIFont fontWithName:@"HelveticaNeue-light" size:25];
-    searchBar.textColor = [UIColor whiteColor];
+    searchBar.textColor = [UIColor blackColor];
     searchBar.layer.cornerRadius = 10;
     UIView *paddingview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     searchBar.leftView = paddingview;
     searchBar.leftViewMode = UITextFieldViewModeAlways;
-    [self.view addSubview:searchBar];
+    searchBar.autocapitalizationType = NO;
+    
+    [headerView addSubview:searchBar];
     
     searchButton = [[UIButton alloc]initWithFrame:CGRectMake(270, 21, 40, 40)];
     searchButton.layer.cornerRadius = 20;
@@ -159,7 +93,7 @@
     UIImage *search = [UIImage imageNamed:@"searchButton.png"];
     [searchButton setImage:search forState:UIControlStateNormal];
     
-    [self.view addSubview:searchButton];
+    [headerView addSubview:searchButton];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -211,6 +145,8 @@
     
     cell.friendInfo = githubFriends[indexPath.row];
     
+    cell.navigationController = self.navigationController;
+    
 // Configure the cell...
     
     
@@ -222,26 +158,25 @@
 {
     NSLog(@"Select row at %@", indexPath);
     
-    GFAViewController * profileView = [[GFAViewController alloc] init];
-    
-    profileView.view.backgroundColor = [UIColor lightGrayColor];
-    
-    profileView.friendInfo = githubFriends[indexPath.row];
-    
-    [self.navigationController pushViewController: profileView animated: YES];
-    
 }
 
 - (void)searchButtonClicked
 {
     NSLog(@"Search Button Clicked");
     self.view.backgroundColor = [UIColor grayColor];
+    
+    NSDictionary * userInfo = [GRAGithubRequest requestUserInfo:searchBar.text];
+    
+    [githubFriends insertObject:userInfo atIndex:0];
+    
+  //  [githubFriends addObject:userInfo];
+    
+    [self.tableView reloadData];
+    
+    [GRAGithubRequest saveUsers:githubFriends];
 }
 
--(void)profileButtonClicked
-{
-    
-}
+
 
 
 /*
@@ -253,34 +188,38 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [githubFriends removeObjectAtIndex: indexPath.row];
+        
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
 }
-*/
 
-/*
+
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
 
 /*
 #pragma mark - Navigation

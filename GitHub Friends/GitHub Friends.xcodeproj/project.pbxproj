@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD35DE9D1986A1D500D3F711 /* GRAGithubRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35DE9C1986A1D500D3F711 /* GRAGithubRequest.m */; };
 		DD53E9C919813EF700219D83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD53E9C819813EF700219D83 /* Foundation.framework */; };
 		DD53E9CB19813EF700219D83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD53E9CA19813EF700219D83 /* CoreGraphics.framework */; };
 		DD53E9CD19813EF700219D83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD53E9CC19813EF700219D83 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD35DE9B1986A1D500D3F711 /* GRAGithubRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAGithubRequest.h; sourceTree = "<group>"; };
+		DD35DE9C1986A1D500D3F711 /* GRAGithubRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAGithubRequest.m; sourceTree = "<group>"; };
 		DD53E9C519813EF700219D83 /* GitHub Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD53E9C819813EF700219D83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD53E9CA19813EF700219D83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 				DD53E9FC1981481600219D83 /* GFATableViewCell.m */,
 				DD8B5C881982A7E80057B802 /* GFAViewController.h */,
 				DD8B5C891982A7E80057B802 /* GFAViewController.m */,
+				DD35DE9B1986A1D500D3F711 /* GRAGithubRequest.h */,
+				DD35DE9C1986A1D500D3F711 /* GRAGithubRequest.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				DD53E9D519813EF700219D83 /* main.m in Sources */,
 				DD53E9FD1981481600219D83 /* GFATableViewCell.m in Sources */,
 				DD53E9D919813EF700219D83 /* GFAAppDelegate.m in Sources */,
+				DD35DE9D1986A1D500D3F711 /* GRAGithubRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

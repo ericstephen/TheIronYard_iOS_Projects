@@ -22,6 +22,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        webView = [[UIWebView alloc] initWithFrame: self.view.frame];
+        
+        [self.view addSubview:webView];
     }
     return self;
 }
@@ -30,10 +34,6 @@
 
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    webView = [[UIWebView alloc] initWithFrame: self.view.frame];
-    
-    [self.view addSubview:webView];
     
 }
 
