@@ -10,7 +10,9 @@
 
 #import "IWAFilterVC.h"
 
-@interface IWAFilteredImageVC ()
+#import "Parse/Parse.h"
+
+@interface IWAFilteredImageVC () <UITextViewDelegate>
 
 @end
 
@@ -18,9 +20,13 @@
 {
     UIImageView * filterView;
     
-    UITextField * pictureComment;
+    UITextView * pictureComment;
     
     UIButton * submit;
+    
+    UIView * captionHolder;
+    
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,21 +38,60 @@
         filterView.contentMode = UIViewContentModeScaleAspectFill;
         filterView.clipsToBounds = YES;
         [self.view addSubview:filterView];
+    
         
-        pictureComment = [[UITextField alloc] initWithFrame:CGRectMake(10, 335, 300, 150)];
+        captionHolder = [[UIView alloc] initWithFrame:CGRectMake(0, 310, 320, [UIScreen mainScreen].bounds.size.height - 310)];
+        captionHolder.backgroundColor = [UIColor lightGrayColor];
+        captionHolder.layer.borderWidth = 10;
+        captionHolder.layer.borderColor = [UIColor whiteColor].CGColor;
+        [self.view addSubview:captionHolder];
+    
+        
+        pictureComment = [[UITextView alloc] initWithFrame:CGRectMake(20, 20, 280, captionHolder.frame.size.height - 70)];
         pictureComment.backgroundColor = [UIColor whiteColor];
-        pictureComment.placeholder = @"  Add Comment";
+        pictureComment.delegate = self;
         pictureComment.font = [UIFont fontWithName:@"Helvetica-Neue" size:14];
-        [self.view addSubview:pictureComment];
         
-        submit = [[UIButton alloc] initWithFrame:CGRectMake(10, 495, 300, 60)];
+        [captionHolder addSubview:pictureComment];
+        
+        
+        submit = [[UIButton alloc] initWithFrame:CGRectMake(20, captionHolder.frame.size.height - 60, 280, 40)];
         submit.backgroundColor = [UIColor colorWithRed:1.000f green:0.427f blue:0.212f alpha:1.0f];
         [submit setTitle:@"SUBMIT" forState:UIControlStateNormal];
         [submit addTarget:self action:@selector(submitClicked) forControlEvents: UIControlEventTouchUpInside];
-        [self.view addSubview:submit];
+        
+        [submit addTarget:self action:@selector(saveFace) forControlEvents:UIControlEventTouchUpInside];
+        
+        [captionHolder addSubview:submit];
         
     }
     return self;
+}
+
+- (void)saveFace
+{
+    PFObject * face = [PFObject objectWithClassName:@"Faces"];
+    
+    [face setObject:pictureComment.text forKey:@"text"];
+    
+    NSData * data = UIImagePNGRepresentation(filterView.image);
+    
+    PFFile * file = [PFFile fileWithData:data];
+    
+    [face setObject:file forKey:@"image"];
+    
+    [face saveInBackground];
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        captionHolder.center = CGPointMake(captionHolder.center.x, captionHolder.center.y - 250);
+        
+    }];
 }
 
 - (void)viewDidLoad

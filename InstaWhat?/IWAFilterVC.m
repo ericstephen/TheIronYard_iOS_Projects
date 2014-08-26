@@ -41,7 +41,6 @@
                     @"CIColorCube",
 //                    @"CIColorCubeWithColorSpace",
 //                    @"CIColorInvert",
-//                    @"CIColorMap",
                     @"CIColorMonochrome",
                     @"CIColorPosterize",
                     @"CIFalseColor",
@@ -141,7 +140,7 @@
     [self.navigationController pushViewController:filteredVC animated:YES];
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self showFilterView:filteredImages[[NSString stringWithFormat:@"%d", (int)indexPath.item]]];
 }
