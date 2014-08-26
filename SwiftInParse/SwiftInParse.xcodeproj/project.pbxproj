@@ -108,10 +108,9 @@
 		DD6E044B19ACBE5300C079F8 = {
 			isa = PBXGroup;
 			children = (
-				DD6E049A19ACD14200C079F8 /* ObjC */,
-				DD6E047919ACC07B00C079F8 /* Frameworks */,
 				DD6E045619ACBE5300C079F8 /* SwiftInParse */,
 				DD6E046919ACBE5400C079F8 /* SwiftInParseTests */,
+				DD6E047919ACC07B00C079F8 /* Frameworks */,
 				DD6E045519ACBE5300C079F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,10 +127,11 @@
 		DD6E045619ACBE5300C079F8 /* SwiftInParse */ = {
 			isa = PBXGroup;
 			children = (
-				DD6E047619ACBF1E00C079F8 /* SwiftInParse-Bridging-Header.h */,
 				DD6E045919ACBE5300C079F8 /* AppDelegate.swift */,
 				DD6E049619ACCA3A00C079F8 /* FacesTVC.swift */,
 				DD6E049819ACCB2600C079F8 /* FaceCell.swift */,
+				DD6E047619ACBF1E00C079F8 /* SwiftInParse-Bridging-Header.h */,
+				DD6E049A19ACD14200C079F8 /* ObjC */,
 				DD6E045D19ACBE5300C079F8 /* Main.storyboard */,
 				DD6E046019ACBE5300C079F8 /* Images.xcassets */,
 				DD6E045719ACBE5300C079F8 /* Supporting Files */,
@@ -154,7 +154,7 @@
 				DD6E046A19ACBE5400C079F8 /* Supporting Files */,
 			);
 			path = SwiftInParseTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		DD6E046A19ACBE5400C079F8 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -195,6 +195,7 @@
 				DD6E04A019ACD21600C079F8 /* IWAFilteredImageVC.m */,
 			);
 			name = ObjC;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +501,7 @@
 				DD6E047219ACBE5400C079F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD6E047319ACBE5400C079F8 /* Build configuration list for PBXNativeTarget "SwiftInParseTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +510,7 @@
 				DD6E047519ACBE5400C079F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
