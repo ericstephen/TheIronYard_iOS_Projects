@@ -10,7 +10,7 @@ import UIKit
 
 class FacesTVC: UITableViewController {
     
-    var faces: [PFObject] = []
+    var faces: [AnyObject] = []
     
 
     override func viewDidLoad() {
@@ -27,6 +27,22 @@ class FacesTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var query = PFQuery(className: "Faces")
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!,
+            error: NSError!) -> Void in
+            
+            self.faces = objects
+            self.tableView.reloadData()
+            
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,10 +59,14 @@ class FacesTVC: UITableViewController {
 
         var faceInfo = faces[indexPath.row] as PFObject
         
+        var file = faceInfo.objectForKey("image") as PFFile
         
-               cell.FaceView = 
+        cell.FaceView.image = UIImage(data:file.getData())
 
+        
         return cell
+        
+    
     }
     
 
