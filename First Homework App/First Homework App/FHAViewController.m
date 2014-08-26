@@ -66,7 +66,7 @@
     
 }
 
-- (IBAction)changeBackgroundRed:(id) -sender {
+- (IBAction)changeBackgroundRed:(id)sender {
     self.view.backgroundColor = [UIColor redColor];
 }
 - (IBAction)changeBackgroundGreen:(id)sender {

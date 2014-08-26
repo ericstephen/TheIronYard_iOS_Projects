@@ -108,14 +108,14 @@
         count.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
         count.font = [UIFont fontWithName:@"HelveticaNeue-bold"size:10];
         
-        [self.contentView addSubview:count];
+        //[self.contentView addSubview:count];
 
         leader = [[UILabel alloc]initWithFrame:CGRectMake(170, 80, 40, 24)];
         leader.backgroundColor = [UIColor colorWithRed:0.227f green:0.227f blue:0.227f alpha:1.0f];
         leader.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
         leader.textAlignment= NSTextAlignmentCenter;
 
-        [self.contentView addSubview:leader];
+        //[self.contentView addSubview:leader];
         
         
         follower = [[UILabel alloc]initWithFrame:CGRectMake(170, 80, 40, 24)];
@@ -123,7 +123,7 @@
         follower.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
         follower.textAlignment = NSTextAlignmentCenter;
         
-        [self.contentView addSubview:follower];
+        //[self.contentView addSubview:follower];
         
         
         justFriends = [[UILabel alloc]initWithFrame:CGRectMake(165, 80, 65 , 24)];
@@ -131,7 +131,7 @@
         justFriends.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
         justFriends.textAlignment = NSTextAlignmentCenter;
         
-        [self.contentView addSubview:justFriends];
+        //[self.contentView addSubview:justFriends];
         
     }
     return self;
@@ -184,9 +184,6 @@
         
         [self.contentView addSubview:leader];
 
-        
-
-        
     }
     
     else if  (ratio < 0)
