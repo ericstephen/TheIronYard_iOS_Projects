@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD89C43819A233380078BCB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C43719A233380078BCB9 /* Foundation.framework */; };
+		DD89C43A19A233380078BCB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C43919A233380078BCB9 /* CoreGraphics.framework */; };
+		DD89C43C19A233380078BCB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C43B19A233380078BCB9 /* UIKit.framework */; };
+		DD89C44219A233380078BCB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD89C44019A233380078BCB9 /* InfoPlist.strings */; };
+		DD89C44419A233380078BCB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C44319A233380078BCB9 /* main.m */; };
+		DD89C44819A233380078BCB9 /* MCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C44719A233380078BCB9 /* MCSAppDelegate.m */; };
+		DD89C44B19A233380078BCB9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD89C44919A233380078BCB9 /* Main_iPhone.storyboard */; };
+		DD89C44E19A233380078BCB9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD89C44C19A233380078BCB9 /* Main_iPad.storyboard */; };
+		DD89C45119A233380078BCB9 /* MCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C45019A233380078BCB9 /* MCSViewController.m */; };
+		DD89C45319A233390078BCB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD89C45219A233390078BCB9 /* Images.xcassets */; };
+		DD89C45A19A233390078BCB9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C45919A233390078BCB9 /* XCTest.framework */; };
+		DD89C45B19A233390078BCB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C43719A233380078BCB9 /* Foundation.framework */; };
+		DD89C45C19A233390078BCB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89C43B19A233380078BCB9 /* UIKit.framework */; };
+		DD89C46419A233390078BCB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD89C46219A233390078BCB9 /* InfoPlist.strings */; };
+		DD89C46619A233390078BCB9 /* My_Cool_spotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C46519A233390078BCB9 /* My_Cool_spotsTests.m */; };
+		DD89C47119A23D7B0078BCB9 /* MCSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C47019A23D7B0078BCB9 /* MCSAnnotation.m */; };
+		DD89C47419A248F50078BCB9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DD89C47319A248F50078BCB9 /* blue.png */; };
+		DD89C47619A2490D0078BCB9 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = DD89C47519A2490D0078BCB9 /* green.png */; };
+		DD89C47819A2492E0078BCB9 /* magenta.png in Resources */ = {isa = PBXBuildFile; fileRef = DD89C47719A2492E0078BCB9 /* magenta.png */; };
+		DD89C47B19A27E910078BCB9 /* MCSFourSquareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C47A19A27E910078BCB9 /* MCSFourSquareRequest.m */; };
+		DD89C47E19A282460078BCB9 /* MCSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C47D19A282460078BCB9 /* MCSTableViewController.m */; };
+		DD89C48519A28B600078BCB9 /* 4^2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD89C48419A28B600078BCB9 /* 4^2.png */; };
+		DD89C48A19A28E090078BCB9 /* MCSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD89C48919A28E090078BCB9 /* MCSTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD89C45D19A233390078BCB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD89C42C19A233380078BCB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD89C43319A233380078BCB9;
+			remoteInfo = "My Cool spots";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD89C43419A233380078BCB9 /* My Cool spots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Cool spots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD89C43719A233380078BCB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD89C43919A233380078BCB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD89C43B19A233380078BCB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD89C43F19A233380078BCB9 /* My Cool spots-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "My Cool spots-Info.plist"; sourceTree = "<group>"; };
+		DD89C44119A233380078BCB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD89C44319A233380078BCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD89C44519A233380078BCB9 /* My Cool spots-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Cool spots-Prefix.pch"; sourceTree = "<group>"; };
+		DD89C44619A233380078BCB9 /* MCSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSAppDelegate.h; sourceTree = "<group>"; };
+		DD89C44719A233380078BCB9 /* MCSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCSAppDelegate.m; sourceTree = "<group>"; };
+		DD89C44A19A233380078BCB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DD89C44D19A233380078BCB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DD89C44F19A233380078BCB9 /* MCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSViewController.h; sourceTree = "<group>"; };
+		DD89C45019A233380078BCB9 /* MCSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCSViewController.m; sourceTree = "<group>"; };
+		DD89C45219A233390078BCB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD89C45819A233390078BCB9 /* My Cool spotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Cool spotsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD89C45919A233390078BCB9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DD89C46119A233390078BCB9 /* My Cool spotsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "My Cool spotsTests-Info.plist"; sourceTree = "<group>"; };
+		DD89C46319A233390078BCB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD89C46519A233390078BCB9 /* My_Cool_spotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My_Cool_spotsTests.m; sourceTree = "<group>"; };
+		DD89C46F19A23D7B0078BCB9 /* MCSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSAnnotation.h; sourceTree = "<group>"; };
+		DD89C47019A23D7B0078BCB9 /* MCSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSAnnotation.m; sourceTree = "<group>"; };
+		DD89C47319A248F50078BCB9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = "../../../Downloads/Map Location Pins/PNG/blue.png"; sourceTree = "<group>"; };
+		DD89C47519A2490D0078BCB9 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = "../../../Downloads/Map Location Pins/PNG/green.png"; sourceTree = "<group>"; };
+		DD89C47719A2492E0078BCB9 /* magenta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magenta.png; path = "../../../Downloads/Map Location Pins/PNG/magenta.png"; sourceTree = "<group>"; };
+		DD89C47919A27E910078BCB9 /* MCSFourSquareRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSFourSquareRequest.h; path = ../MCSFourSquareRequest.h; sourceTree = "<group>"; };
+		DD89C47A19A27E910078BCB9 /* MCSFourSquareRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSFourSquareRequest.m; path = ../MCSFourSquareRequest.m; sourceTree = "<group>"; };
+		DD89C47C19A282460078BCB9 /* MCSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSTableViewController.h; path = ../MCSTableViewController.h; sourceTree = "<group>"; };
+		DD89C47D19A282460078BCB9 /* MCSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSTableViewController.m; path = ../MCSTableViewController.m; sourceTree = "<group>"; };
+		DD89C48419A28B600078BCB9 /* 4^2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4^2.png"; path = "../../../Desktop/4^2.png"; sourceTree = "<group>"; };
+		DD89C48819A28E090078BCB9 /* MCSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSTableViewCell.h; sourceTree = "<group>"; };
+		DD89C48919A28E090078BCB9 /* MCSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD89C43119A233380078BCB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C43A19A233380078BCB9 /* CoreGraphics.framework in Frameworks */,
+				DD89C43C19A233380078BCB9 /* UIKit.framework in Frameworks */,
+				DD89C43819A233380078BCB9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD89C45519A233390078BCB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C45A19A233390078BCB9 /* XCTest.framework in Frameworks */,
+				DD89C45C19A233390078BCB9 /* UIKit.framework in Frameworks */,
+				DD89C45B19A233390078BCB9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD89C42B19A233380078BCB9 = {
+			isa = PBXGroup;
+			children = (
+				DD89C47219A248B20078BCB9 /* Images */,
+				DD89C46F19A23D7B0078BCB9 /* MCSAnnotation.h */,
+				DD89C47019A23D7B0078BCB9 /* MCSAnnotation.m */,
+				DD89C43D19A233380078BCB9 /* My Cool spots */,
+				DD89C45F19A233390078BCB9 /* My Cool spotsTests */,
+				DD89C43619A233380078BCB9 /* Frameworks */,
+				DD89C43519A233380078BCB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD89C43519A233380078BCB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C43419A233380078BCB9 /* My Cool spots.app */,
+				DD89C45819A233390078BCB9 /* My Cool spotsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD89C43619A233380078BCB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C43719A233380078BCB9 /* Foundation.framework */,
+				DD89C43919A233380078BCB9 /* CoreGraphics.framework */,
+				DD89C43B19A233380078BCB9 /* UIKit.framework */,
+				DD89C45919A233390078BCB9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD89C43D19A233380078BCB9 /* My Cool spots */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C44619A233380078BCB9 /* MCSAppDelegate.h */,
+				DD89C44719A233380078BCB9 /* MCSAppDelegate.m */,
+				DD89C44F19A233380078BCB9 /* MCSViewController.h */,
+				DD89C45019A233380078BCB9 /* MCSViewController.m */,
+				DD89C47919A27E910078BCB9 /* MCSFourSquareRequest.h */,
+				DD89C47A19A27E910078BCB9 /* MCSFourSquareRequest.m */,
+				DD89C48619A28DB10078BCB9 /* TableView */,
+				DD89C48719A28DBB0078BCB9 /* Storyboard */,
+				DD89C45219A233390078BCB9 /* Images.xcassets */,
+				DD89C43E19A233380078BCB9 /* Supporting Files */,
+			);
+			path = "My Cool spots";
+			sourceTree = "<group>";
+		};
+		DD89C43E19A233380078BCB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C43F19A233380078BCB9 /* My Cool spots-Info.plist */,
+				DD89C44019A233380078BCB9 /* InfoPlist.strings */,
+				DD89C44319A233380078BCB9 /* main.m */,
+				DD89C44519A233380078BCB9 /* My Cool spots-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD89C45F19A233390078BCB9 /* My Cool spotsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C46519A233390078BCB9 /* My_Cool_spotsTests.m */,
+				DD89C46019A233390078BCB9 /* Supporting Files */,
+			);
+			path = "My Cool spotsTests";
+			sourceTree = "<group>";
+		};
+		DD89C46019A233390078BCB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C46119A233390078BCB9 /* My Cool spotsTests-Info.plist */,
+				DD89C46219A233390078BCB9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD89C47219A248B20078BCB9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C48419A28B600078BCB9 /* 4^2.png */,
+				DD89C47719A2492E0078BCB9 /* magenta.png */,
+				DD89C47319A248F50078BCB9 /* blue.png */,
+				DD89C47519A2490D0078BCB9 /* green.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DD89C48619A28DB10078BCB9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C47C19A282460078BCB9 /* MCSTableViewController.h */,
+				DD89C47D19A282460078BCB9 /* MCSTableViewController.m */,
+				DD89C48819A28E090078BCB9 /* MCSTableViewCell.h */,
+				DD89C48919A28E090078BCB9 /* MCSTableViewCell.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		DD89C48719A28DBB0078BCB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DD89C44919A233380078BCB9 /* Main_iPhone.storyboard */,
+				DD89C44C19A233380078BCB9 /* Main_iPad.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD89C43319A233380078BCB9 /* My Cool spots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD89C46919A233390078BCB9 /* Build configuration list for PBXNativeTarget "My Cool spots" */;
+			buildPhases = (
+				DD89C43019A233380078BCB9 /* Sources */,
+				DD89C43119A233380078BCB9 /* Frameworks */,
+				DD89C43219A233380078BCB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Cool spots";
+			productName = "My Cool spots";
+			productReference = DD89C43419A233380078BCB9 /* My Cool spots.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD89C45719A233390078BCB9 /* My Cool spotsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD89C46C19A233390078BCB9 /* Build configuration list for PBXNativeTarget "My Cool spotsTests" */;
+			buildPhases = (
+				DD89C45419A233390078BCB9 /* Sources */,
+				DD89C45519A233390078BCB9 /* Frameworks */,
+				DD89C45619A233390078BCB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD89C45E19A233390078BCB9 /* PBXTargetDependency */,
+			);
+			name = "My Cool spotsTests";
+			productName = "My Cool spotsTests";
+			productReference = DD89C45819A233390078BCB9 /* My Cool spotsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD89C42C19A233380078BCB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MCS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Eric Williams";
+				TargetAttributes = {
+					DD89C45719A233390078BCB9 = {
+						TestTargetID = DD89C43319A233380078BCB9;
+					};
+				};
+			};
+			buildConfigurationList = DD89C42F19A233380078BCB9 /* Build configuration list for PBXProject "My Cool spots" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD89C42B19A233380078BCB9;
+			productRefGroup = DD89C43519A233380078BCB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD89C43319A233380078BCB9 /* My Cool spots */,
+				DD89C45719A233390078BCB9 /* My Cool spotsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD89C43219A233380078BCB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C44E19A233380078BCB9 /* Main_iPad.storyboard in Resources */,
+				DD89C45319A233390078BCB9 /* Images.xcassets in Resources */,
+				DD89C47819A2492E0078BCB9 /* magenta.png in Resources */,
+				DD89C44B19A233380078BCB9 /* Main_iPhone.storyboard in Resources */,
+				DD89C47619A2490D0078BCB9 /* green.png in Resources */,
+				DD89C44219A233380078BCB9 /* InfoPlist.strings in Resources */,
+				DD89C48519A28B600078BCB9 /* 4^2.png in Resources */,
+				DD89C47419A248F50078BCB9 /* blue.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD89C45619A233390078BCB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C46419A233390078BCB9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD89C43019A233380078BCB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C47119A23D7B0078BCB9 /* MCSAnnotation.m in Sources */,
+				DD89C47E19A282460078BCB9 /* MCSTableViewController.m in Sources */,
+				DD89C48A19A28E090078BCB9 /* MCSTableViewCell.m in Sources */,
+				DD89C45119A233380078BCB9 /* MCSViewController.m in Sources */,
+				DD89C44819A233380078BCB9 /* MCSAppDelegate.m in Sources */,
+				DD89C47B19A27E910078BCB9 /* MCSFourSquareRequest.m in Sources */,
+				DD89C44419A233380078BCB9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD89C45419A233390078BCB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD89C46619A233390078BCB9 /* My_Cool_spotsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD89C45E19A233390078BCB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD89C43319A233380078BCB9 /* My Cool spots */;
+			targetProxy = DD89C45D19A233390078BCB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD89C44019A233380078BCB9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD89C44119A233380078BCB9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD89C44919A233380078BCB9 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD89C44A19A233380078BCB9 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DD89C44C19A233380078BCB9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD89C44D19A233380078BCB9 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DD89C46219A233390078BCB9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD89C46319A233390078BCB9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD89C46719A233390078BCB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD89C46819A233390078BCB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD89C46A19A233390078BCB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Cool spots/My Cool spots-Prefix.pch";
+				INFOPLIST_FILE = "My Cool spots/My Cool spots-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD89C46B19A233390078BCB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Cool spots/My Cool spots-Prefix.pch";
+				INFOPLIST_FILE = "My Cool spots/My Cool spots-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DD89C46D19A233390078BCB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/My Cool spots.app/My Cool spots";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Cool spots/My Cool spots-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "My Cool spotsTests/My Cool spotsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DD89C46E19A233390078BCB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/My Cool spots.app/My Cool spots";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Cool spots/My Cool spots-Prefix.pch";
+				INFOPLIST_FILE = "My Cool spotsTests/My Cool spotsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD89C42F19A233380078BCB9 /* Build configuration list for PBXProject "My Cool spots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD89C46719A233390078BCB9 /* Debug */,
+				DD89C46819A233390078BCB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD89C46919A233390078BCB9 /* Build configuration list for PBXNativeTarget "My Cool spots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD89C46A19A233390078BCB9 /* Debug */,
+				DD89C46B19A233390078BCB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD89C46C19A233390078BCB9 /* Build configuration list for PBXNativeTarget "My Cool spotsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD89C46D19A233390078BCB9 /* Debug */,
+				DD89C46E19A233390078BCB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD89C42C19A233380078BCB9 /* Project object */;
+}

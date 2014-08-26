@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDB7F241199CEE6400AB7308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F240199CEE6400AB7308 /* Foundation.framework */; };
+		DDB7F243199CEE6400AB7308 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F242199CEE6400AB7308 /* CoreGraphics.framework */; };
+		DDB7F245199CEE6400AB7308 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F244199CEE6400AB7308 /* UIKit.framework */; };
+		DDB7F24B199CEE6400AB7308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F249199CEE6400AB7308 /* InfoPlist.strings */; };
+		DDB7F24D199CEE6400AB7308 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F24C199CEE6400AB7308 /* main.m */; };
+		DDB7F251199CEE6400AB7308 /* SIGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F250199CEE6400AB7308 /* SIGAppDelegate.m */; };
+		DDB7F253199CEE6400AB7308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F252199CEE6400AB7308 /* Images.xcassets */; };
+		DDB7F25A199CEE6400AB7308 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F259199CEE6400AB7308 /* XCTest.framework */; };
+		DDB7F25B199CEE6400AB7308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F240199CEE6400AB7308 /* Foundation.framework */; };
+		DDB7F25C199CEE6400AB7308 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7F244199CEE6400AB7308 /* UIKit.framework */; };
+		DDB7F264199CEE6400AB7308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F262199CEE6400AB7308 /* InfoPlist.strings */; };
+		DDB7F266199CEE6400AB7308 /* Signatures2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F265199CEE6400AB7308 /* Signatures2Tests.m */; };
+		DDB7F272199CF04800AB7308 /* SIGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F271199CF04800AB7308 /* SIGRootViewController.m */; };
+		DDB7F275199CF09500AB7308 /* SIGListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F274199CF09500AB7308 /* SIGListTableViewController.m */; };
+		DDB7F278199CF0B700AB7308 /* SIGDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F277199CF0B700AB7308 /* SIGDrawViewController.m */; };
+		DDB7F27B199CF0C900AB7308 /* SIGDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F27A199CF0C900AB7308 /* SIGDrawView.m */; };
+		DDB7F27E199CF0DC00AB7308 /* SIGListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F27D199CF0DC00AB7308 /* SIGListTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDB7F25D199CEE6400AB7308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDB7F235199CEE6400AB7308 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDB7F23C199CEE6400AB7308;
+			remoteInfo = Signatures2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDB7F23D199CEE6400AB7308 /* Signatures2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signatures2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB7F240199CEE6400AB7308 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDB7F242199CEE6400AB7308 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DDB7F244199CEE6400AB7308 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDB7F248199CEE6400AB7308 /* Signatures2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Signatures2-Info.plist"; sourceTree = "<group>"; };
+		DDB7F24A199CEE6400AB7308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDB7F24C199CEE6400AB7308 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDB7F24E199CEE6400AB7308 /* Signatures2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Signatures2-Prefix.pch"; sourceTree = "<group>"; };
+		DDB7F24F199CEE6400AB7308 /* SIGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SIGAppDelegate.h; sourceTree = "<group>"; };
+		DDB7F250199CEE6400AB7308 /* SIGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIGAppDelegate.m; sourceTree = "<group>"; };
+		DDB7F252199CEE6400AB7308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDB7F258199CEE6400AB7308 /* Signatures2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Signatures2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB7F259199CEE6400AB7308 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DDB7F261199CEE6400AB7308 /* Signatures2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Signatures2Tests-Info.plist"; sourceTree = "<group>"; };
+		DDB7F263199CEE6400AB7308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDB7F265199CEE6400AB7308 /* Signatures2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Signatures2Tests.m; sourceTree = "<group>"; };
+		DDB7F270199CF04800AB7308 /* SIGRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGRootViewController.h; sourceTree = "<group>"; };
+		DDB7F271199CF04800AB7308 /* SIGRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGRootViewController.m; sourceTree = "<group>"; };
+		DDB7F273199CF09500AB7308 /* SIGListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGListTableViewController.h; sourceTree = "<group>"; };
+		DDB7F274199CF09500AB7308 /* SIGListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGListTableViewController.m; sourceTree = "<group>"; };
+		DDB7F276199CF0B700AB7308 /* SIGDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGDrawViewController.h; sourceTree = "<group>"; };
+		DDB7F277199CF0B700AB7308 /* SIGDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGDrawViewController.m; sourceTree = "<group>"; };
+		DDB7F279199CF0C900AB7308 /* SIGDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGDrawView.h; sourceTree = "<group>"; };
+		DDB7F27A199CF0C900AB7308 /* SIGDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGDrawView.m; sourceTree = "<group>"; };
+		DDB7F27C199CF0DC00AB7308 /* SIGListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGListTableViewCell.h; sourceTree = "<group>"; };
+		DDB7F27D199CF0DC00AB7308 /* SIGListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGListTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDB7F23A199CEE6400AB7308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F243199CEE6400AB7308 /* CoreGraphics.framework in Frameworks */,
+				DDB7F245199CEE6400AB7308 /* UIKit.framework in Frameworks */,
+				DDB7F241199CEE6400AB7308 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB7F255199CEE6400AB7308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F25A199CEE6400AB7308 /* XCTest.framework in Frameworks */,
+				DDB7F25C199CEE6400AB7308 /* UIKit.framework in Frameworks */,
+				DDB7F25B199CEE6400AB7308 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDB7F234199CEE6400AB7308 = {
+			isa = PBXGroup;
+			children = (
+				DDB7F26F199CEE6F00AB7308 /* Controllers */,
+				DDB7F246199CEE6400AB7308 /* Signatures2 */,
+				DDB7F25F199CEE6400AB7308 /* Signatures2Tests */,
+				DDB7F23F199CEE6400AB7308 /* Frameworks */,
+				DDB7F23E199CEE6400AB7308 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDB7F23E199CEE6400AB7308 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F23D199CEE6400AB7308 /* Signatures2.app */,
+				DDB7F258199CEE6400AB7308 /* Signatures2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDB7F23F199CEE6400AB7308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F240199CEE6400AB7308 /* Foundation.framework */,
+				DDB7F242199CEE6400AB7308 /* CoreGraphics.framework */,
+				DDB7F244199CEE6400AB7308 /* UIKit.framework */,
+				DDB7F259199CEE6400AB7308 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDB7F246199CEE6400AB7308 /* Signatures2 */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F24F199CEE6400AB7308 /* SIGAppDelegate.h */,
+				DDB7F250199CEE6400AB7308 /* SIGAppDelegate.m */,
+				DDB7F252199CEE6400AB7308 /* Images.xcassets */,
+				DDB7F247199CEE6400AB7308 /* Supporting Files */,
+			);
+			path = Signatures2;
+			sourceTree = "<group>";
+		};
+		DDB7F247199CEE6400AB7308 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F248199CEE6400AB7308 /* Signatures2-Info.plist */,
+				DDB7F249199CEE6400AB7308 /* InfoPlist.strings */,
+				DDB7F24C199CEE6400AB7308 /* main.m */,
+				DDB7F24E199CEE6400AB7308 /* Signatures2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB7F25F199CEE6400AB7308 /* Signatures2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F265199CEE6400AB7308 /* Signatures2Tests.m */,
+				DDB7F260199CEE6400AB7308 /* Supporting Files */,
+			);
+			path = Signatures2Tests;
+			sourceTree = "<group>";
+		};
+		DDB7F260199CEE6400AB7308 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F261199CEE6400AB7308 /* Signatures2Tests-Info.plist */,
+				DDB7F262199CEE6400AB7308 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB7F26F199CEE6F00AB7308 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F270199CF04800AB7308 /* SIGRootViewController.h */,
+				DDB7F271199CF04800AB7308 /* SIGRootViewController.m */,
+				DDB7F273199CF09500AB7308 /* SIGListTableViewController.h */,
+				DDB7F274199CF09500AB7308 /* SIGListTableViewController.m */,
+				DDB7F27F199CF0F500AB7308 /* ListTVC */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DDB7F27F199CF0F500AB7308 /* ListTVC */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F276199CF0B700AB7308 /* SIGDrawViewController.h */,
+				DDB7F277199CF0B700AB7308 /* SIGDrawViewController.m */,
+				DDB7F27C199CF0DC00AB7308 /* SIGListTableViewCell.h */,
+				DDB7F27D199CF0DC00AB7308 /* SIGListTableViewCell.m */,
+				DDB7F280199CF10300AB7308 /* DrawVC */,
+			);
+			name = ListTVC;
+			sourceTree = "<group>";
+		};
+		DDB7F280199CF10300AB7308 /* DrawVC */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F279199CF0C900AB7308 /* SIGDrawView.h */,
+				DDB7F27A199CF0C900AB7308 /* SIGDrawView.m */,
+			);
+			name = DrawVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDB7F23C199CEE6400AB7308 /* Signatures2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB7F269199CEE6400AB7308 /* Build configuration list for PBXNativeTarget "Signatures2" */;
+			buildPhases = (
+				DDB7F239199CEE6400AB7308 /* Sources */,
+				DDB7F23A199CEE6400AB7308 /* Frameworks */,
+				DDB7F23B199CEE6400AB7308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Signatures2;
+			productName = Signatures2;
+			productReference = DDB7F23D199CEE6400AB7308 /* Signatures2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDB7F257199CEE6400AB7308 /* Signatures2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB7F26C199CEE6400AB7308 /* Build configuration list for PBXNativeTarget "Signatures2Tests" */;
+			buildPhases = (
+				DDB7F254199CEE6400AB7308 /* Sources */,
+				DDB7F255199CEE6400AB7308 /* Frameworks */,
+				DDB7F256199CEE6400AB7308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDB7F25E199CEE6400AB7308 /* PBXTargetDependency */,
+			);
+			name = Signatures2Tests;
+			productName = Signatures2Tests;
+			productReference = DDB7F258199CEE6400AB7308 /* Signatures2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDB7F235199CEE6400AB7308 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SIG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Eric Williams";
+				TargetAttributes = {
+					DDB7F23C199CEE6400AB7308 = {
+						DevelopmentTeam = YUM7RTQH92;
+					};
+					DDB7F257199CEE6400AB7308 = {
+						TestTargetID = DDB7F23C199CEE6400AB7308;
+					};
+				};
+			};
+			buildConfigurationList = DDB7F238199CEE6400AB7308 /* Build configuration list for PBXProject "Signatures2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DDB7F234199CEE6400AB7308;
+			productRefGroup = DDB7F23E199CEE6400AB7308 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDB7F23C199CEE6400AB7308 /* Signatures2 */,
+				DDB7F257199CEE6400AB7308 /* Signatures2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDB7F23B199CEE6400AB7308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F24B199CEE6400AB7308 /* InfoPlist.strings in Resources */,
+				DDB7F253199CEE6400AB7308 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB7F256199CEE6400AB7308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F264199CEE6400AB7308 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDB7F239199CEE6400AB7308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F27E199CF0DC00AB7308 /* SIGListTableViewCell.m in Sources */,
+				DDB7F251199CEE6400AB7308 /* SIGAppDelegate.m in Sources */,
+				DDB7F275199CF09500AB7308 /* SIGListTableViewController.m in Sources */,
+				DDB7F278199CF0B700AB7308 /* SIGDrawViewController.m in Sources */,
+				DDB7F272199CF04800AB7308 /* SIGRootViewController.m in Sources */,
+				DDB7F27B199CF0C900AB7308 /* SIGDrawView.m in Sources */,
+				DDB7F24D199CEE6400AB7308 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB7F254199CEE6400AB7308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB7F266199CEE6400AB7308 /* Signatures2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDB7F25E199CEE6400AB7308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDB7F23C199CEE6400AB7308 /* Signatures2 */;
+			targetProxy = DDB7F25D199CEE6400AB7308 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDB7F249199CEE6400AB7308 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDB7F24A199CEE6400AB7308 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DDB7F262199CEE6400AB7308 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDB7F263199CEE6400AB7308 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDB7F267199CEE6400AB7308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDB7F268199CEE6400AB7308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDB7F26A199CEE6400AB7308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Signatures2/Signatures2-Prefix.pch";
+				INFOPLIST_FILE = "Signatures2/Signatures2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DDB7F26B199CEE6400AB7308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Signatures2/Signatures2-Prefix.pch";
+				INFOPLIST_FILE = "Signatures2/Signatures2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DDB7F26D199CEE6400AB7308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Signatures2.app/Signatures2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Signatures2/Signatures2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Signatures2Tests/Signatures2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DDB7F26E199CEE6400AB7308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Signatures2.app/Signatures2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Signatures2/Signatures2-Prefix.pch";
+				INFOPLIST_FILE = "Signatures2Tests/Signatures2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDB7F238199CEE6400AB7308 /* Build configuration list for PBXProject "Signatures2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB7F267199CEE6400AB7308 /* Debug */,
+				DDB7F268199CEE6400AB7308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDB7F269199CEE6400AB7308 /* Build configuration list for PBXNativeTarget "Signatures2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB7F26A199CEE6400AB7308 /* Debug */,
+				DDB7F26B199CEE6400AB7308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDB7F26C199CEE6400AB7308 /* Build configuration list for PBXNativeTarget "Signatures2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB7F26D199CEE6400AB7308 /* Debug */,
+				DDB7F26E199CEE6400AB7308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDB7F235199CEE6400AB7308 /* Project object */;
+}
