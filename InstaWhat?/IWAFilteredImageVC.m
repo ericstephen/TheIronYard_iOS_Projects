@@ -12,7 +12,6 @@
 
 @interface IWAFilteredImageVC ()
 
-
 @end
 
 @implementation IWAFilteredImageVC
@@ -34,21 +33,17 @@
         filterView.clipsToBounds = YES;
         [self.view addSubview:filterView];
         
-        pictureComment = [[UITextField alloc] initWithFrame:CGRectMake(10, 340, 300, 150)];
+        pictureComment = [[UITextField alloc] initWithFrame:CGRectMake(10, 335, 300, 150)];
         pictureComment.backgroundColor = [UIColor whiteColor];
         pictureComment.placeholder = @"  Add Comment";
         pictureComment.font = [UIFont fontWithName:@"Helvetica-Neue" size:14];
-//        pictureComment.layer.cornerRadius = 10;
         [self.view addSubview:pictureComment];
         
         submit = [[UIButton alloc] initWithFrame:CGRectMake(10, 495, 300, 60)];
         submit.backgroundColor = [UIColor colorWithRed:1.000f green:0.427f blue:0.212f alpha:1.0f];
-//        submit.layer.cornerRadius = 10;
         [submit setTitle:@"SUBMIT" forState:UIControlStateNormal];
         [submit addTarget:self action:@selector(submitClicked) forControlEvents: UIControlEventTouchUpInside];
         [self.view addSubview:submit];
-        
-        
         
     }
     return self;
@@ -84,6 +79,11 @@
 
 
 -(void)submitClicked
+{
+    
+}
+
+- (void)textWithImage;
 {
     
 }

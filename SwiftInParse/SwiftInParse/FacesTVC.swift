@@ -18,6 +18,8 @@ class FacesTVC: UITableViewController {
         
         Parse.setApplicationId("CHrByCncfOZCQyv8LI94f9bJLyj4XONFoEHFPtML", clientKey: "cDzT2j8AbNWG8zgQkeRi541qDrr4TytQJ0vIjyob")
 
+        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,7 +44,7 @@ class FacesTVC: UITableViewController {
         var faceInfo = faces[indexPath.row] as PFObject
         
         
-        //       cell.FaceView =
+               cell.FaceView = 
 
         return cell
     }
@@ -93,4 +95,13 @@ class FacesTVC: UITableViewController {
     }
     */
 
+    @IBAction func newFace(sender: UIBarButtonItem) {
+        
+        let navC = UINavigationController(rootViewController:IWAViewController())
+        
+        self.navigationController.presentViewController(navC, animated: true) { () -> Void in
+        
+        
+        }
+    }
 }

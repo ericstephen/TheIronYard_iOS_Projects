@@ -45,6 +45,15 @@
                             <outlet property="delegate" destination="PYu-bC-Mir" id="WXB-0J-UdX"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="E0z-rU-bjc"/>
+                        <barButtonItem systemItem="camera" id="cpb-Fd-tRm">
+                            <connections>
+                                <action selector="newFace:" destination="PYu-bC-Mir" id="uHW-AA-cev"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="VNs-ey-2zO"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Face Kicks" id="n0V-wa-LNa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liP-w0-eMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,11 +63,14 @@
         <!--Navigation Controller-->
         <scene sceneID="Sx8-We-etq">
             <objects>
-                <navigationController id="ywh-gs-jMI" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="ywh-gs-jMI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oLI-7F-rAC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="C0S-Jj-Ugs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="PYu-bC-Mir" kind="relationship" relationship="rootViewController" id="Xfs-Nq-vPV"/>
                     </connections>

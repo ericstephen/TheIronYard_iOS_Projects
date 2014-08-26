@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DD6E045A19ACBE5300C079F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E045919ACBE5300C079F8 /* AppDelegate.swift */; };
-		DD6E045C19ACBE5300C079F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E045B19ACBE5300C079F8 /* ViewController.swift */; };
 		DD6E045F19ACBE5300C079F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6E045D19ACBE5300C079F8 /* Main.storyboard */; };
 		DD6E046119ACBE5300C079F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6E046019ACBE5300C079F8 /* Images.xcassets */; };
 		DD6E046D19ACBE5400C079F8 /* SwiftInParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E046C19ACBE5400C079F8 /* SwiftInParseTests.swift */; };
@@ -46,7 +45,6 @@
 		DD6E045419ACBE5300C079F8 /* SwiftInParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftInParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6E045819ACBE5300C079F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD6E045919ACBE5300C079F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD6E045B19ACBE5300C079F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD6E045E19ACBE5300C079F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6E046019ACBE5300C079F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD6E046619ACBE5400C079F8 /* SwiftInParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftInParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +130,6 @@
 			children = (
 				DD6E047619ACBF1E00C079F8 /* SwiftInParse-Bridging-Header.h */,
 				DD6E045919ACBE5300C079F8 /* AppDelegate.swift */,
-				DD6E045B19ACBE5300C079F8 /* ViewController.swift */,
 				DD6E049619ACCA3A00C079F8 /* FacesTVC.swift */,
 				DD6E049819ACCB2600C079F8 /* FaceCell.swift */,
 				DD6E045D19ACBE5300C079F8 /* Main.storyboard */,
@@ -303,7 +300,6 @@
 				DD6E04A119ACD21600C079F8 /* IWAViewController.m in Sources */,
 				DD6E049919ACCB2600C079F8 /* FaceCell.swift in Sources */,
 				DD6E04A219ACD21600C079F8 /* IWAFilterVC.m in Sources */,
-				DD6E045C19ACBE5300C079F8 /* ViewController.swift in Sources */,
 				DD6E049719ACCA3A00C079F8 /* FacesTVC.swift in Sources */,
 				DD6E045A19ACBE5300C079F8 /* AppDelegate.swift in Sources */,
 			);

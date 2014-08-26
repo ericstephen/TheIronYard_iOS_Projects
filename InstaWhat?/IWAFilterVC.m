@@ -76,7 +76,6 @@
         filterCollection.layer.borderWidth = 6;
         filterCollection.backgroundColor = [UIColor colorWithRed:0.843f green:0.863f blue:0.882f alpha:1.0f];
         
-        
         [filterCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
         
         [self.view addSubview:filterCollection];

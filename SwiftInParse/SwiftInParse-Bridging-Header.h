@@ -11,5 +11,12 @@
 
 #import <Parse/Parse.h>
 
+#import "IWAViewController.h"
+
+#import "IWAFilterVC.h"
+
+#import "IWAFilteredImageVC.h"
+
+
 
 
