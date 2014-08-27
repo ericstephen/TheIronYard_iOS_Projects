@@ -80,7 +80,13 @@
     
     [face setObject:file forKey:@"image"];
     
-    [face saveInBackground];
+    [face saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
+        
+        [nc postNotificationName:@"faceSaved" object:nil];
+        
+    }];
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }

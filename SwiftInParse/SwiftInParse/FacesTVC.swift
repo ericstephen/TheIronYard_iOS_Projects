@@ -8,6 +8,8 @@
 
 import UIKit
 
+let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+
 class FacesTVC: UITableViewController {
     
     var faces: [AnyObject] = []
@@ -17,8 +19,16 @@ class FacesTVC: UITableViewController {
         super.viewDidLoad()
         
         Parse.setApplicationId("CHrByCncfOZCQyv8LI94f9bJLyj4XONFoEHFPtML", clientKey: "cDzT2j8AbNWG8zgQkeRi541qDrr4TytQJ0vIjyob")
-
         
+        self.refreshData()
+        
+        var nc = NSNotificationCenter.defaultCenter()
+        
+        nc.addObserverForName("faceSaved", object: nil, queue: NSOperationQueue.mainQueue()) { (notification: NSNotification!) -> Void in
+            
+            self.refreshData()
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,8 +38,7 @@ class FacesTVC: UITableViewController {
     }
 
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    func refreshData() {
         
         var query = PFQuery(className: "Faces")
         
@@ -38,7 +47,6 @@ class FacesTVC: UITableViewController {
             
             self.faces = objects
             self.tableView.reloadData()
-            
             
         }
     }
@@ -66,7 +74,6 @@ class FacesTVC: UITableViewController {
         
         return cell
         
-    
     }
     
 
