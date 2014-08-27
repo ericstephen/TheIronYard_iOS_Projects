@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9AC6D6AD-124F-4639-9E9B-A1D0EAD1C6D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lets Be Friends</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D188DC1349F407C5C2A8461A0D40E176666E7DA0</key>
+		<string>https://github.com/ericstephen/TheIronYard_iOS_Projects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lets Be Friends/Lets Be Friends.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D188DC1349F407C5C2A8461A0D40E176666E7DA0</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ericstephen/TheIronYard_iOS_Projects.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D188DC1349F407C5C2A8461A0D40E176666E7DA0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D188DC1349F407C5C2A8461A0D40E176666E7DA0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-TrainingApps</string>
+		</dict>
+	</array>
+</dict>
+</plist>
