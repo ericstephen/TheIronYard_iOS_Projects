@@ -115,8 +115,27 @@ class ViewController: UIViewController {
     var fieldData: [String:UITextField]!
     
     func login() {
+        
+        PFUser.logInWithUsernameInBackground(fieldData["Username"]!.text, password:fieldData["Password"]!.text, block: { (user: PFUser!, error: NSError!) -> Void in
+            
+            self.loginHolder.removeFromSuperview()
+           
+            if user != nil {
+                println(user.objectForKey("team"))
+                
+                if user.objectForKey("team") == nil {
+                    self.showTeams()
+                    
+                } else {
+                    self.attackMode()
+                }
+                
+            } else {
+                println(error)
+            }
     
-        var user = PFUser.logInWithUsername(fieldData["Username"]!.text, password: fieldData["Password"]!.text)
+    
+        })
     
     }
     
@@ -133,6 +152,8 @@ class ViewController: UIViewController {
             if succeeded {
             
                 print("you are logged in")
+                
+                self.signupHolder.removeFromSuperview()
             
             } else {
                 
@@ -142,12 +163,91 @@ class ViewController: UIViewController {
         }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var teamHolder = UIView()
+    
+    func showTeams() {
+        
+        teamHolder.frame = self.view.frame
+        
+        var redTeam = UIButton(frame: CGRectMake(0, 0, 320, UIScreen.mainScreen().bounds.size.height/2.0))
+        redTeam.backgroundColor = UIColor.redColor()
+        redTeam.tag = 1
+        redTeam.addTarget(self, action: Selector("chooseTeam:"), forControlEvents: .TouchUpInside)
+        teamHolder.addSubview(redTeam)
+        
+        var blueTeam = UIButton(frame: CGRectMake(0, UIScreen.mainScreen().bounds.size.height/2.0, 320, UIScreen.mainScreen().bounds.size.height/2.0))
+        blueTeam.backgroundColor = UIColor.blueColor()
+        blueTeam.addTarget(self, action: Selector("chooseTeam:"), forControlEvents: .TouchUpInside)
+        teamHolder.addSubview(blueTeam)
+        
+        self.view.addSubview(teamHolder)
+        
     }
+    
+    func chooseTeam(teamButton:UIButton) {
+        
+        var user = PFUser.currentUser()
+        
+        switch teamButton.tag {
+        case 1 :
+            user.setObject("red", forKey: "team")
+        default :
+            user.setObject("blue", forKey: "team")
+        }
+        
+        user.saveInBackground()
+        teamHolder.removeFromSuperview()
+        
+        attackMode()
+    }
+    
+    func attackMode() {
+        
+        var installation = PFInstallation.currentInstallation()
+        installation.setObject(PFUser.currentUser(), forKey: "user")
+        installation.saveInBackground()
+        
+        var attackButton = UIButton(frame: CGRectMake(10, 200, 300, 40))
+        
+        attackButton.setTitle("Attack", forState: .Normal)
+        attackButton.backgroundColor = UIColor.blackColor()
+        
+        attackButton.addTarget(self, action: Selector("attack"), forControlEvents: .TouchUpInside)
+        
+        self.view.addSubview(attackButton)
+    }
+    
+    func attack() {
+        
+        var user = PFUser.currentUser()
+        
+        var otherTeam = (user.objectForKey("team") as String == "red") ? "blue" : "red"
+        
+        var userQuery = PFUser.query()
+        userQuery.whereKey("team", equalTo: otherTeam)
+        
+        userQuery.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError!) -> Void in
+            
+            println("users \(objects)")
+        }
+        
+        
+        var deviceQuery = PFInstallation.query()
+        deviceQuery.whereKey("user", matchesQuery:userQuery)
 
+//        deviceQuery.findObjectsInBackgroundWithBlock { (objects:[AnyObject]!, error:NSError!) -> Void in
+//            
+//            println(objects)
+//        }
+        
+        var push = PFPush()
+        
+        push.setQuery(deviceQuery)
+        push.setMessage("You have been attacked")
+        push.sendPushInBackground()
+        
+    }
 
 }
 
