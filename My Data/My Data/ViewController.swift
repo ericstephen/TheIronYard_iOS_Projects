@@ -18,9 +18,18 @@ class ViewController: UIViewController {
         
         var appD = UIApplication.sharedApplication().delegate as AppDelegate
         
-        var fetchRequest = NSFetchRequest()
-        
         var entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: appD.managedObjectContext)
+        
+        var postObject = NSEntityDescription.insertNewObjectForEntityForName("Post", inManagedObjectContext: appD.managedObjectContext) as NSManagedObject
+        
+        postObject.setValue("jo@theironyard.com", forKey: "user")
+        postObject.setValue("this is a cool title", forKey: "title")
+        
+        appD.saveContext()
+        
+        // Fetch Request
+        
+        var fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = entity
         
@@ -28,7 +37,7 @@ class ViewController: UIViewController {
         
         fetchRequest.predicate = predicate
         
-        var sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        var sortDescriptor = NSSortDescriptor(key: "posted_at", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
