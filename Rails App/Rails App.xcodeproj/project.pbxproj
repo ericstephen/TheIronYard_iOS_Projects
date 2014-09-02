@@ -12,6 +12,7 @@
 		DD5309BE19B5F98600FC2D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5309BC19B5F98600FC2D5C /* Main.storyboard */; };
 		DD5309C019B5F98600FC2D5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5309BF19B5F98600FC2D5C /* Images.xcassets */; };
 		DD5309CC19B5F98600FC2D5C /* Rails_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5309CB19B5F98600FC2D5C /* Rails_AppTests.swift */; };
+		DD5309D619B6015600FC2D5C /* Deal_with_it.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5309D519B6015600FC2D5C /* Deal_with_it.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		DD5309C519B5F98600FC2D5C /* Rails AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rails AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5309CA19B5F98600FC2D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD5309CB19B5F98600FC2D5C /* Rails_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rails_AppTests.swift; sourceTree = "<group>"; };
+		DD5309D519B6015600FC2D5C /* Deal_with_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deal_with_it.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5309B719B5F98600FC2D5C /* Info.plist */,
+				DD5309D719B6030500FC2D5C /* Images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -107,6 +110,14 @@
 				DD5309CA19B5F98600FC2D5C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD5309D719B6030500FC2D5C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DD5309D519B6015600FC2D5C /* Deal_with_it.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5309BE19B5F98600FC2D5C /* Main.storyboard in Resources */,
+				DD5309D619B6015600FC2D5C /* Deal_with_it.png in Resources */,
 				DD5309C019B5F98600FC2D5C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
