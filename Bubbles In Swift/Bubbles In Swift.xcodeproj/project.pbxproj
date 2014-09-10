@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD3DEE0819BD402E007906AC /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3DEE0719BD402E007906AC /* twitter@2x.png */; };
+		DDF830C619BA253B004B267F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF830C519BA253B004B267F /* AppDelegate.swift */; };
+		DDF830C819BA253B004B267F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF830C719BA253B004B267F /* ViewController.swift */; };
+		DDF830CB19BA253B004B267F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF830C919BA253B004B267F /* Main.storyboard */; };
+		DDF830CD19BA253B004B267F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF830CC19BA253B004B267F /* Images.xcassets */; };
+		DDF830D919BA253B004B267F /* Bubbles_In_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF830D819BA253B004B267F /* Bubbles_In_SwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDF830D319BA253B004B267F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDF830B819BA253A004B267F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDF830BF19BA253A004B267F;
+			remoteInfo = "Bubbles In Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD3DEE0719BD402E007906AC /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		DDF830C019BA253A004B267F /* Bubbles In Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubbles In Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF830C419BA253B004B267F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF830C519BA253B004B267F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DDF830C719BA253B004B267F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDF830CA19BA253B004B267F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDF830CC19BA253B004B267F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDF830D219BA253B004B267F /* Bubbles In SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bubbles In SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF830D719BA253B004B267F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF830D819BA253B004B267F /* Bubbles_In_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubbles_In_SwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDF830BD19BA253A004B267F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF830CF19BA253B004B267F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDF830B719BA253A004B267F = {
+			isa = PBXGroup;
+			children = (
+				DDF830C219BA253A004B267F /* Bubbles In Swift */,
+				DDF830D519BA253B004B267F /* Bubbles In SwiftTests */,
+				DDF830C119BA253A004B267F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDF830C119BA253A004B267F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDF830C019BA253A004B267F /* Bubbles In Swift.app */,
+				DDF830D219BA253B004B267F /* Bubbles In SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDF830C219BA253A004B267F /* Bubbles In Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DDF830C519BA253B004B267F /* AppDelegate.swift */,
+				DDF830C719BA253B004B267F /* ViewController.swift */,
+				DDF830C919BA253B004B267F /* Main.storyboard */,
+				DDF830CC19BA253B004B267F /* Images.xcassets */,
+				DDF830C319BA253B004B267F /* Supporting Files */,
+			);
+			path = "Bubbles In Swift";
+			sourceTree = "<group>";
+		};
+		DDF830C319BA253B004B267F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD3DEE0719BD402E007906AC /* twitter@2x.png */,
+				DDF830C419BA253B004B267F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDF830D519BA253B004B267F /* Bubbles In SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDF830D819BA253B004B267F /* Bubbles_In_SwiftTests.swift */,
+				DDF830D619BA253B004B267F /* Supporting Files */,
+			);
+			path = "Bubbles In SwiftTests";
+			sourceTree = "<group>";
+		};
+		DDF830D619BA253B004B267F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDF830D719BA253B004B267F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDF830BF19BA253A004B267F /* Bubbles In Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDF830DC19BA253B004B267F /* Build configuration list for PBXNativeTarget "Bubbles In Swift" */;
+			buildPhases = (
+				DDF830BC19BA253A004B267F /* Sources */,
+				DDF830BD19BA253A004B267F /* Frameworks */,
+				DDF830BE19BA253A004B267F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bubbles In Swift";
+			productName = "Bubbles In Swift";
+			productReference = DDF830C019BA253A004B267F /* Bubbles In Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDF830D119BA253B004B267F /* Bubbles In SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDF830DF19BA253B004B267F /* Build configuration list for PBXNativeTarget "Bubbles In SwiftTests" */;
+			buildPhases = (
+				DDF830CE19BA253B004B267F /* Sources */,
+				DDF830CF19BA253B004B267F /* Frameworks */,
+				DDF830D019BA253B004B267F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDF830D419BA253B004B267F /* PBXTargetDependency */,
+			);
+			name = "Bubbles In SwiftTests";
+			productName = "Bubbles In SwiftTests";
+			productReference = DDF830D219BA253B004B267F /* Bubbles In SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDF830B819BA253A004B267F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Eric Williams";
+				TargetAttributes = {
+					DDF830BF19BA253A004B267F = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DDF830D119BA253B004B267F = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = DDF830BF19BA253A004B267F;
+					};
+				};
+			};
+			buildConfigurationList = DDF830BB19BA253A004B267F /* Build configuration list for PBXProject "Bubbles In Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDF830B719BA253A004B267F;
+			productRefGroup = DDF830C119BA253A004B267F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDF830BF19BA253A004B267F /* Bubbles In Swift */,
+				DDF830D119BA253B004B267F /* Bubbles In SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDF830BE19BA253A004B267F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3DEE0819BD402E007906AC /* twitter@2x.png in Resources */,
+				DDF830CB19BA253B004B267F /* Main.storyboard in Resources */,
+				DDF830CD19BA253B004B267F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF830D019BA253B004B267F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDF830BC19BA253A004B267F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF830C819BA253B004B267F /* ViewController.swift in Sources */,
+				DDF830C619BA253B004B267F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDF830CE19BA253B004B267F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF830D919BA253B004B267F /* Bubbles_In_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDF830D419BA253B004B267F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDF830BF19BA253A004B267F /* Bubbles In Swift */;
+			targetProxy = DDF830D319BA253B004B267F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDF830C919BA253B004B267F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDF830CA19BA253B004B267F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDF830DA19BA253B004B267F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDF830DB19BA253B004B267F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDF830DD19BA253B004B267F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Bubbles In Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DDF830DE19BA253B004B267F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Bubbles In Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DDF830E019BA253B004B267F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bubbles In SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubbles In Swift.app/Bubbles In Swift";
+			};
+			name = Debug;
+		};
+		DDF830E119BA253B004B267F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bubbles In SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubbles In Swift.app/Bubbles In Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDF830BB19BA253A004B267F /* Build configuration list for PBXProject "Bubbles In Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF830DA19BA253B004B267F /* Debug */,
+				DDF830DB19BA253B004B267F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDF830DC19BA253B004B267F /* Build configuration list for PBXNativeTarget "Bubbles In Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF830DD19BA253B004B267F /* Debug */,
+				DDF830DE19BA253B004B267F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDF830DF19BA253B004B267F /* Build configuration list for PBXNativeTarget "Bubbles In SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF830E019BA253B004B267F /* Debug */,
+				DDF830E119BA253B004B267F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDF830B819BA253A004B267F /* Project object */;
+}
