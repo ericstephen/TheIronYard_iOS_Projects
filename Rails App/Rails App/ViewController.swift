@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 let API = "http://ancient-taiga-9634.herokuapp.com/"
 
+var appD = UIApplication.sharedApplication().delegate as AppDelegate
+
 class ViewController: UIViewController {
+    
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var contentField: UITextField!
@@ -19,9 +23,9 @@ class ViewController: UIViewController {
         
         let newPostURL = API + "posts?post[title]=\(titleField.text)&post[content]=\(contentField.text)"
         
-        let encodingString = newPostURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let encodedString = newPostURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
-        var request = NSMutableURLRequest(URL: NSURL(string: newPostURL))
+        var request = NSMutableURLRequest(URL: NSURL(string: encodedString!))
         
         request.setValue("zxcasdqwe", forHTTPHeaderField: "AUTH_TOKEN")
         
@@ -36,7 +40,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func getMyPosts(sender: AnyObject) {
+    @IBAction func getmyPosts(sender: AnyObject) {
         
         let myPostsURL = API + "posts/mine"
         
@@ -53,8 +57,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func getAllPosts(sender: AnyObject) {
+    @IBAction func loadCoreData(sender: AnyObject) {
         
         let allPostsURL = API + "posts"
         
@@ -64,23 +67,59 @@ class ViewController: UIViewController {
             
             let posts = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
             
-            println(posts)
+            for postInfo in posts {
+                
+                var postObject = NSEntityDescription.insertNewObjectForEntityForName("Post", inManagedObjectContext: appD.managedObjectContext!) as NSManagedObject
+                
+                let title = postInfo["title"] as? String
+                
+                if title != nil{
+                    postObject.setValue(postInfo["user"], forKey: "user")
+                    postObject.setValue(postInfo["title"], forKey: "title")
+                    postObject.setValue(postInfo["url"], forKey: "url")
+                }
+            }
+        
+            appD.saveContext() // save the data to core data
+            
         }
+        
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        self.retrieveSavedCoreData()
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func retrieveSavedCoreData() {
+        
+        // Fetch Request
+        
+        var fetchRequest = NSFetchRequest()
+        
+        var entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: appD.managedObjectContext!)
+        
+        fetchRequest.entity = entity
+        
+        var predicate = NSPredicate(format: "user = 'jo@theironyard.com'")
+        
+        fetchRequest.predicate = predicate
+        
+        var sortDescriptor = NSSortDescriptor(key: "posted_at", ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        var fetchedObjects = appD.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as Array!
+
+        println(fetchedObjects.count)
+        
+//        for post in fetchedObjects
+//        {
+//        println(post)
+//        }
     }
-    
-    
 }
 

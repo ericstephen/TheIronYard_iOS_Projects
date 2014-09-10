@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
@@ -29,12 +29,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQw-ck-C1e">
-                                <rect key="frame" x="116" y="270" width="89" height="30"/>
-                                <state key="normal" title="Get All Posts">
+                                <rect key="frame" x="116" y="232" width="93" height="30"/>
+                                <state key="normal" title="Get My Posts">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getAllPosts:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7n7-SM-6LN"/>
+                                    <action selector="getmyPosts:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JNR-ry-qRb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30V-K2-ZyK">
@@ -58,17 +58,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eec-oT-Z0P">
+                                <rect key="frame" x="29" y="307" width="262" height="253"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PT-bV-cIJ">
-                                <rect key="frame" x="114" y="232" width="93" height="30"/>
-                                <state key="normal" title="Get My Posts">
+                                <rect key="frame" x="106" y="269" width="108" height="30"/>
+                                <state key="normal" title="Load Core Data">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getMyPosts:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BN4-Su-zAZ"/>
+                                    <action selector="loadCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7cV-EA-Q0a"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Deal_with_it.png" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-8s-yQh">
-                                <rect key="frame" x="40" y="336" width="240" height="179"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Deal_with_it.png" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-8s-yQh">
+                                <rect key="frame" x="136" y="5" width="175" height="138"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
