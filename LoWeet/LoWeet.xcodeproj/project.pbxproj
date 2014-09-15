@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD5ADB3519C72D6300840D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5ADB3419C72D6300840D25 /* Main.storyboard */; };
 		DDE07AB319C71D0F002FE018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AB219C71D0F002FE018 /* AppDelegate.swift */; };
-		DDE07AB519C71D0F002FE018 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AB419C71D0F002FE018 /* FirstViewController.swift */; };
-		DDE07AB719C71D0F002FE018 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AB619C71D0F002FE018 /* SecondViewController.swift */; };
-		DDE07ABA19C71D10002FE018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE07AB819C71D10002FE018 /* Main.storyboard */; };
 		DDE07ABC19C71D10002FE018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE07ABB19C71D10002FE018 /* Images.xcassets */; };
 		DDE07ABF19C71D10002FE018 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE07ABD19C71D10002FE018 /* LaunchScreen.xib */; };
 		DDE07ACB19C71D10002FE018 /* LoWeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07ACA19C71D10002FE018 /* LoWeetTests.swift */; };
+		DDE07AD519C7216E002FE018 /* TweetLocationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AD419C7216E002FE018 /* TweetLocationTVC.swift */; };
+		DDE07AD719C72193002FE018 /* TweetLocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AD619C72193002FE018 /* TweetLocationsTableViewController.swift */; };
+		DDE07AD919C721DE002FE018 /* MapLocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AD819C721DE002FE018 /* MapLocationsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD5ADB3419C72D6300840D25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
 		DDE07AAD19C71D0F002FE018 /* LoWeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoWeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE07AB119C71D0F002FE018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE07AB219C71D0F002FE018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDE07AB419C71D0F002FE018 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DDE07AB619C71D0F002FE018 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DDE07AB919C71D10002FE018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE07ABB19C71D10002FE018 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDE07ABE19C71D10002FE018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DDE07AC419C71D10002FE018 /* LoWeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoWeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE07AC919C71D10002FE018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE07ACA19C71D10002FE018 /* LoWeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoWeetTests.swift; sourceTree = "<group>"; };
+		DDE07AD419C7216E002FE018 /* TweetLocationTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetLocationTVC.swift; path = ../TweetLocationTVC.swift; sourceTree = "<group>"; };
+		DDE07AD619C72193002FE018 /* TweetLocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetLocationsTableViewController.swift; path = ../TweetLocationsTableViewController.swift; sourceTree = "<group>"; };
+		DDE07AD819C721DE002FE018 /* MapLocationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapLocationsVC.swift; path = ../MapLocationsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +81,11 @@
 		DDE07AAF19C71D0F002FE018 /* LoWeet */ = {
 			isa = PBXGroup;
 			children = (
+				DD5ADB3419C72D6300840D25 /* Main.storyboard */,
+				DDE07AD819C721DE002FE018 /* MapLocationsVC.swift */,
+				DDE07AD619C72193002FE018 /* TweetLocationsTableViewController.swift */,
+				DDE07AD419C7216E002FE018 /* TweetLocationTVC.swift */,
 				DDE07AB219C71D0F002FE018 /* AppDelegate.swift */,
-				DDE07AB419C71D0F002FE018 /* FirstViewController.swift */,
-				DDE07AB619C71D0F002FE018 /* SecondViewController.swift */,
-				DDE07AB819C71D10002FE018 /* Main.storyboard */,
 				DDE07ABB19C71D10002FE018 /* Images.xcassets */,
 				DDE07ABD19C71D10002FE018 /* LaunchScreen.xib */,
 				DDE07AB019C71D0F002FE018 /* Supporting Files */,
@@ -195,7 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE07ABA19C71D10002FE018 /* Main.storyboard in Resources */,
+				DD5ADB3519C72D6300840D25 /* Main.storyboard in Resources */,
 				DDE07ABF19C71D10002FE018 /* LaunchScreen.xib in Resources */,
 				DDE07ABC19C71D10002FE018 /* Images.xcassets in Resources */,
 			);
@@ -215,9 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE07AB719C71D0F002FE018 /* SecondViewController.swift in Sources */,
+				DDE07AD719C72193002FE018 /* TweetLocationsTableViewController.swift in Sources */,
+				DDE07AD519C7216E002FE018 /* TweetLocationTVC.swift in Sources */,
+				DDE07AD919C721DE002FE018 /* MapLocationsVC.swift in Sources */,
 				DDE07AB319C71D0F002FE018 /* AppDelegate.swift in Sources */,
-				DDE07AB519C71D0F002FE018 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DDE07AB819C71D10002FE018 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDE07AB919C71D10002FE018 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDE07ABD19C71D10002FE018 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -409,6 +405,7 @@
 				DDE07AD019C71D10002FE018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDE07AD119C71D10002FE018 /* Build configuration list for PBXNativeTarget "LoWeetTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +414,7 @@
 				DDE07AD319C71D10002FE018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
