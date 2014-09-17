@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD45D5CB19C76E5B009F817B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45D5CA19C76E5B009F817B /* Marker.swift */; };
+		DD4A72F419C7BEA9005A66BA /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4A72E719C7BE4C005A66BA /* SwifteriOS.framework */; };
 		DD5ADB3519C72D6300840D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5ADB3419C72D6300840D25 /* Main.storyboard */; };
+		DD5ADB3719C734AF00840D25 /* NewLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5ADB3619C734AF00840D25 /* NewLocationVC.swift */; };
+		DD5BD37D19C73A8700FB2447 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5BD37C19C73A8700FB2447 /* LocationData.swift */; };
 		DDE07AB319C71D0F002FE018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE07AB219C71D0F002FE018 /* AppDelegate.swift */; };
 		DDE07ABC19C71D10002FE018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE07ABB19C71D10002FE018 /* Images.xcassets */; };
 		DDE07ABF19C71D10002FE018 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE07ABD19C71D10002FE018 /* LaunchScreen.xib */; };
@@ -18,6 +22,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD4A72E419C7BE4C005A66BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		DD4A72E619C7BE4C005A66BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		DD4A72E819C7BE4C005A66BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		DD4A72EA19C7BE4C005A66BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		DD4A72EC19C7BE4C005A66BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C5A1944AECB00993175;
+			remoteInfo = SwifterDemoMacTests;
+		};
 		DDE07AC519C71D10002FE018 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDE07AA519C71D0F002FE018 /* Project object */;
@@ -28,7 +67,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD45D5CA19C76E5B009F817B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../Downloads/Swifter-master-2/Swifter.xcodeproj"; sourceTree = "<group>"; };
 		DD5ADB3419C72D6300840D25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
+		DD5ADB3619C734AF00840D25 /* NewLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocationVC.swift; sourceTree = "<group>"; };
+		DD5BD37C19C73A8700FB2447 /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		DDE07AAD19C71D0F002FE018 /* LoWeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoWeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE07AB119C71D0F002FE018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE07AB219C71D0F002FE018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4A72F419C7BEA9005A66BA /* SwifteriOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4A72DD19C7BE4C005A66BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4A72E519C7BE4C005A66BA /* SwifterDemoiOS.app */,
+				DD4A72E719C7BE4C005A66BA /* SwifteriOS.framework */,
+				DD4A72E919C7BE4C005A66BA /* SwifterMac.framework */,
+				DD4A72EB19C7BE4C005A66BA /* SwifterDemoMac.app */,
+				DD4A72ED19C7BE4C005A66BA /* SwifterDemoMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DDE07AA419C71D0F002FE018 = {
 			isa = PBXGroup;
 			children = (
+				DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */,
 				DDE07AAF19C71D0F002FE018 /* LoWeet */,
 				DDE07AC719C71D10002FE018 /* LoWeetTests */,
 				DDE07AAE19C71D0F002FE018 /* Products */,
@@ -82,13 +139,16 @@
 			isa = PBXGroup;
 			children = (
 				DD5ADB3419C72D6300840D25 /* Main.storyboard */,
+				DD5ADB3619C734AF00840D25 /* NewLocationVC.swift */,
 				DDE07AD819C721DE002FE018 /* MapLocationsVC.swift */,
 				DDE07AD619C72193002FE018 /* TweetLocationsTableViewController.swift */,
 				DDE07AD419C7216E002FE018 /* TweetLocationTVC.swift */,
 				DDE07AB219C71D0F002FE018 /* AppDelegate.swift */,
+				DD5BD37C19C73A8700FB2447 /* LocationData.swift */,
 				DDE07ABB19C71D10002FE018 /* Images.xcassets */,
 				DDE07ABD19C71D10002FE018 /* LaunchScreen.xib */,
 				DDE07AB019C71D0F002FE018 /* Supporting Files */,
+				DD45D5CA19C76E5B009F817B /* Marker.swift */,
 			);
 			path = LoWeet;
 			sourceTree = "<group>";
@@ -167,6 +227,7 @@
 				TargetAttributes = {
 					DDE07AAC19C71D0F002FE018 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 23KSK798ZG;
 					};
 					DDE07AC319C71D10002FE018 = {
 						CreatedOnToolsVersion = 6.0;
@@ -185,6 +246,12 @@
 			mainGroup = DDE07AA419C71D0F002FE018;
 			productRefGroup = DDE07AAE19C71D0F002FE018 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DD4A72DD19C7BE4C005A66BA /* Products */;
+					ProjectRef = DD4A72DC19C7BE4C005A66BA /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DDE07AAC19C71D0F002FE018 /* LoWeet */,
@@ -192,6 +259,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DD4A72E519C7BE4C005A66BA /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = DD4A72E419C7BE4C005A66BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD4A72E719C7BE4C005A66BA /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = DD4A72E619C7BE4C005A66BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD4A72E919C7BE4C005A66BA /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = DD4A72E819C7BE4C005A66BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD4A72EB19C7BE4C005A66BA /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = DD4A72EA19C7BE4C005A66BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD4A72ED19C7BE4C005A66BA /* SwifterDemoMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterDemoMacTests.xctest;
+			remoteRef = DD4A72EC19C7BE4C005A66BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DDE07AAB19C71D0F002FE018 /* Resources */ = {
@@ -218,10 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD5BD37D19C73A8700FB2447 /* LocationData.swift in Sources */,
+				DD5ADB3719C734AF00840D25 /* NewLocationVC.swift in Sources */,
 				DDE07AD719C72193002FE018 /* TweetLocationsTableViewController.swift in Sources */,
 				DDE07AD519C7216E002FE018 /* TweetLocationTVC.swift in Sources */,
 				DDE07AD919C721DE002FE018 /* MapLocationsVC.swift in Sources */,
 				DDE07AB319C71D0F002FE018 /* AppDelegate.swift in Sources */,
+				DD45D5CB19C76E5B009F817B /* Marker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tweets-->
@@ -115,9 +116,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVN-yJ-VcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="-61"/>
+            <point key="canvasLocation" x="2134" y="-9"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Tweets-->
         <scene sceneID="xEL-Wg-WHb">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="tN3-Ce-GlK" customClass="TweetLocationsTableViewController" customModule="LoWeet" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,57 +132,52 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ewv-xN-nsJ" id="KhL-Sb-zWS">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-aa-l3B">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="23" y="16" width="67" height="21"/>
-                                            </variation>
-                                        </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-Da-llu">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XY-be-hqt">
+                                            <rect key="frame" x="26" y="41" width="548" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet Some Kind of Tweet </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <variation key="widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="18" y="46" width="364" height="83"/>
-                                            </variation>
                                         </textView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-57-q6a">
-                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                            <state key="normal" title="Edit">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sno-Wj-JfQ">
+                                            <rect key="frame" x="21" y="1" width="45" height="32"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O8-nj-7Lo">
+                                            <rect key="frame" x="549" y="1" width="30" height="32"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <state key="normal" title="edit">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <variation key="widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="329" y="12" width="30" height="30"/>
-                                            </variation>
                                             <connections>
-                                                <action selector="addNewLocation:" destination="tN3-Ce-GlK" eventType="touchUpInside" id="5MA-fr-LPe"/>
-                                                <action selector="editTweetLocation:" destination="Ewv-xN-nsJ" eventType="touchUpInside" id="qqi-jx-bcT"/>
+                                                <action selector="editTweetLocation:" destination="Ewv-xN-nsJ" eventType="touchUpInside" id="PRY-T1-3Io"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sno-Wj-JfQ" firstAttribute="top" secondItem="KhL-Sb-zWS" secondAttribute="top" constant="1" id="1mi-A9-oX4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7XY-be-hqt" secondAttribute="trailing" constant="18" id="AI6-5u-sBw"/>
+                                        <constraint firstItem="7XY-be-hqt" firstAttribute="leading" secondItem="KhL-Sb-zWS" secondAttribute="leadingMargin" constant="18" id="MPw-Ul-7yy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7XY-be-hqt" secondAttribute="bottom" constant="13" id="QDi-50-8hk"/>
+                                        <constraint firstItem="9O8-nj-7Lo" firstAttribute="top" secondItem="KhL-Sb-zWS" secondAttribute="top" constant="1" id="TI3-qa-rUh"/>
+                                        <constraint firstAttribute="trailing" secondItem="9O8-nj-7Lo" secondAttribute="trailing" constant="21" id="VTy-aw-0kk"/>
+                                        <constraint firstItem="Sno-Wj-JfQ" firstAttribute="leading" secondItem="KhL-Sb-zWS" secondAttribute="leading" constant="21" id="YWP-Qd-nGM"/>
+                                        <constraint firstItem="7XY-be-hqt" firstAttribute="top" secondItem="Sno-Wj-JfQ" secondAttribute="bottom" constant="8" id="deB-lu-JKi"/>
+                                        <constraint firstItem="7XY-be-hqt" firstAttribute="top" secondItem="9O8-nj-7Lo" secondAttribute="bottom" constant="8" id="n9w-ei-eWd"/>
+                                        <constraint firstItem="Sno-Wj-JfQ" firstAttribute="leading" secondItem="KhL-Sb-zWS" secondAttribute="leading" constant="26" id="q0w-jx-T8c"/>
+                                        <constraint firstItem="7XY-be-hqt" firstAttribute="top" secondItem="9O8-nj-7Lo" secondAttribute="bottom" constant="17" id="sz1-vx-ekv"/>
+                                    </constraints>
                                     <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="ecc-aa-l3B"/>
-                                            <exclude reference="h2U-Da-llu"/>
-                                            <exclude reference="7X9-57-q6a"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="widthClass=regular">
-                                        <mask key="subviews">
-                                            <include reference="ecc-aa-l3B"/>
-                                            <include reference="h2U-Da-llu"/>
-                                            <include reference="7X9-57-q6a"/>
+                                        <mask key="constraints">
+                                            <exclude reference="q0w-jx-T8c"/>
+                                            <exclude reference="sz1-vx-ekv"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="locationLabel" destination="ecc-aa-l3B" id="fNX-0J-vkG"/>
-                                    <outlet property="tweetTextView" destination="h2U-Da-llu" id="fXp-mu-8bA"/>
+                                    <outlet property="locationLabel" destination="Sno-Wj-JfQ" id="aJY-2W-eOV"/>
+                                    <outlet property="tweetTextView" destination="7XY-be-hqt" id="GeX-qr-fzH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -191,12 +187,12 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="WJl-bl-HaA"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="WJl-bl-HaA"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3y2-dn-2cm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2526" y="-735"/>
+            <point key="canvasLocation" x="2910" y="-757"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cva-wV-L0d">
@@ -274,53 +270,62 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--New LocationVC-->
         <scene sceneID="6d1-5P-rd6">
             <objects>
-                <viewController id="Oi5-VV-bgI" sceneMemberID="viewController">
+                <viewController id="Oi5-VV-bgI" customClass="NewLocationVC" customModule="LoWeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fiq-H8-xv4"/>
                         <viewControllerLayoutGuide type="bottom" id="nm5-Qn-6VW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hay-oL-zlt">
+                    <view key="view" alpha="0.69999999999999973" contentMode="scaleToFill" id="hay-oL-zlt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1q-Kx-QC3">
-                                <rect key="frame" x="57" y="28" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.34999999999999964" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgj-dY-i3w">
+                                <rect key="frame" x="16" y="70" width="286" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="58" width="311" height="154"/>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Tweet:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1q-Kx-QC3">
+                                <rect key="frame" x="16" y="28" width="106" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.066666670139999995" green="0.5647059083" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="24" y="28" width="42" height="22"/>
+                                    <rect key="frame" x="77" y="20" width="118" height="30"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-pc-4f5">
-                                <rect key="frame" x="57" y="239" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="197" y="216" width="105" height="30"/>
+                                <color key="backgroundColor" red="0.066666670139999995" green="0.5647059083" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="add location">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="220" width="46" height="30"/>
+                                    <rect key="frame" x="221" y="220" width="106" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="saveNewLocation" destination="Oi5-VV-bgI" eventType="touchUpInside" id="2bU-LZ-dIf"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgj-dY-i3w">
-                                <rect key="frame" x="57" y="75" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="240" height="128"/>
-                                </variation>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="v1q-Kx-QC3" id="RY0-JZ-fWF"/>
+                        <outlet property="tweetTextView" destination="wgj-dY-i3w" id="7mT-aZ-mhl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABF-s2-g3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.5" y="-1037"/>
+            <point key="canvasLocation" x="1432" y="-1073"/>
         </scene>
     </scenes>
     <resources>
