@@ -405,6 +405,7 @@
 				DDAB374D19CB1D1100186B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDAB374E19CB1D1100186B61 /* Build configuration list for PBXNativeTarget "ReaxionTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				DDAB375019CB1D1100186B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
