@@ -1,27 +1,17 @@
 //
-//  TweetLocationsTableViewController.swift
+//  FoundLocationsTVC.swift
 //  LoWeet
 //
-//  Created by Eric Williams on 9/15/14.
+//  Created by Eric Williams on 9/17/14.
 //  Copyright (c) 2014 Eric Williams. All rights reserved.
 //
 
 import UIKit
 
-
-class TweetLocationsTableViewController: UITableViewController {
+class FoundLocationsTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nc = NSNotificationCenter.defaultCenter()
-        
-        nc.addObserverForName("tweetLocationsUpdated", object: nil, queue: NSOperationQueue.mainQueue()) { (notification: NSNotification!) -> Void in
-            
-            self.tableView.reloadData()
-            
-        }
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,24 +22,16 @@ class TweetLocationsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return LocationData.mainData().tweetLocations.count
-
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return LocationData.mainData().foundLocations.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tweetLocationCell", forIndexPath: indexPath) as TweetLocationTVC
-        
-        var tweetLocation = LocationData.mainData().tweetLocations[indexPath.row]
-        
-        if let tweet: AnyObject = tweetLocation["tweet"] {
-            
-            cell.tweetTextView.text = tweet as String
-
-            
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("foundLocationCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
 
