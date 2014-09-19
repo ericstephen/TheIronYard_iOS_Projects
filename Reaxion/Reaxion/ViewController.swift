@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     var player = GKLocalPlayer.localPlayer()
     var allLeaderboards: [String:GKLeaderboard] = Dictionary()
     
+    var startReactionTime: NSDate!
+    var endReactionTime: NSDate!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +104,14 @@ class ViewController: UIViewController {
         
         if buttonToTap == button.tag {
             
+            endReactionTime = NSDate()
+            
+            let reactionTime = endReactionTime.timeIntervalSinceDate(startReactionTime)
+            
+            submitReactionTime(reactionTime)
+            
             currentScore++
+            checkAchievement()
             runLevel()
             
         } else {
@@ -120,6 +130,8 @@ class ViewController: UIViewController {
     }
     
     func runLevel() {
+        
+        startReactionTime = NSDate()
         
         buttonToTap = Int(arc4random_uniform(3))
         
@@ -190,10 +202,36 @@ class ViewController: UIViewController {
             
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func checkAchievement() {
+        
+        if currentScore >= 50 {
+            
+            var score50 = GKAchievement(identifier: "score_50")
+            
+            score50.percentComplete = 100.0
+            score50.showsCompletionBanner = true
+            
+            GKAchievement.reportAchievements([score50], withCompletionHandler: { (error) -> Void in
+                
+                println("achievement sent")
+            })
+        }
+    }
+    
+    func submitReactionTime(time: NSTimeInterval) {
+        
+        var scoreReporter = GKScore(leaderboardIdentifier: "reaction_time")
+        
+        scoreReporter.value = Int64(time * 100.0)
+        scoreReporter.context = 0
+        
+        GKScore.reportScores([scoreReporter], withCompletionHandler: { (error) -> Void in
+            
+            println("reaction time reported")
+            
+        })
+        
     }
 }
 
