@@ -231,7 +231,6 @@ class ViewController: UIViewController {
             println("reaction time reported")
             
         })
-        
     }
 }
 
